@@ -5,10 +5,10 @@ Site institucional estático (HTML, CSS e JavaScript) da Qualipix, com cenas 3D 
 ## Rodar localmente
 
 ```bash
-npm start
+npx http-server . -p 8080 -c-1
 ```
 
-Abre em http://localhost:8080. Não há etapa de build: para publicar, envie a pasta inteira, exceto `node_modules/` e `tools/`, para qualquer hospedagem estática (Hostinger, Vercel, Netlify, Nixpacks com servidor estático).
+Abre em http://localhost:8080. Não há etapa de build nem `package.json` na raiz: é um site estático puro (por isso o Coolify/Nixpacks o detecta como site estático e não como app Node). As ferramentas de render ficam isoladas em `tools/` com o próprio `package.json`.
 
 ## Estrutura
 
@@ -27,7 +27,7 @@ Abre em http://localhost:8080. Não há etapa de build: para publicar, envie a p
 
 ## Gerar de novo imagens e vídeos
 
-Com o site rodando em http://localhost:8090 (`npx http-server . -p 8090`) e o Google Chrome instalado:
+Instale as dependências uma vez (`cd tools && npm install`). Depois, com o site rodando em http://localhost:8090 (`npx http-server . -p 8090`) e o Google Chrome instalado, na raiz do projeto:
 
 ```bash
 node tools/render/render.mjs stills

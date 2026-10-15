@@ -4,8 +4,8 @@
   "private": true,
   "description": "Site institucional Qualipix - lousas digitais e displays interativos",
   "scripts": {
-    "start": "npx --yes http-server . -p 8080 -c-1",
-    "render": "node tools/render/render.mjs"
+    "start": "npx --yes http-server .. -p 8080 -c-1",
+    "render": "node render/render.mjs"
   },
   "devDependencies": {
     "mp4-muxer": "^5.2.1",
