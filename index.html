@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qualipix | Lousas digitais e displays interativos 4K</title>
+  <meta name="description" content="Fabricante brasileira de lousas digitais 4K de 32 a 98 polegadas, molduras touch, quadros híbridos, totens e flip charts digitais para educação, empresas, governo, saúde e eventos.">
+  <meta name="theme-color" content="#081217">
+  <meta property="og:title" content="Qualipix | Lousas digitais e displays interativos 4K">
+  <meta property="og:description" content="Aulas e reuniões que respondem ao toque. Lousas digitais 4K de 32 a 98 polegadas, fabricadas pela Qualipix desde 2012.">
+  <meta property="og:image" content="assets/renders/lousa.webp">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script type="module" src="js/main.js?v=2"></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-theme="dark">
+    <div class="wrap header-row">
+      <a class="brand" href="#inicio" aria-label="Qualipix, voltar ao início">
+        <img class="logo-light" src="assets/img/logo-qualipix-branco.png" alt="Qualipix" width="350" height="93"><img class="logo-dark" src="assets/img/logo-qualipix.png" alt="" width="350" height="93">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#escolher">Como escolher</a>
+        <a href="#segmentos">Segmentos</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/551126904299?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com especialista</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span class="sr-only">Abrir menu</span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Menu">
+      <a href="#produtos">Produtos</a>
+      <a href="#escolher">Como escolher</a>
+      <a href="#segmentos">Segmentos</a>
+      <a href="#empresa">Empresa</a>
+      <a href="#contato">Contato</a>
+      <a class="btn btn-primary" href="https://wa.me/551126904299" target="_blank" rel="noopener">Falar com especialista</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -------------------------------------------------------------->
+    <section class="hero" id="inicio" data-theme="dark">
+      <div class="hero-sticky">
+        <canvas class="hero-canvas" id="hero-canvas" aria-label="Lousa digital Qualipix em 3D. Com o mouse, clique e arraste sobre a tela para escrever."></canvas>
+        <div class="hero-fallback" aria-hidden="true"></div>
+        <div class="wrap hero-layout">
+          <div class="hero-copy">
+            <h1 class="hero-title">
+              <span class="line"><span>Aulas e reuniões</span></span>
+              <span class="line"><span>que respondem</span></span>
+              <span class="line"><span>ao toque.</span></span>
+            </h1>
+            <p class="hero-lead">Lousas digitais 4K de 32" a 98", molduras touch e quadros híbridos fabricados pela Qualipix desde 2012. Esta tela funciona de verdade: experimente escrever nela.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/551126904299?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com um especialista</a>
+              <a class="btn btn-ghost" href="#produtos">Ver produtos</a>
+            </div>
+          </div>
+          <div class="hero-tools">
+            <button class="btn btn-ghost btn-sm draw-toggle" type="button" aria-pressed="false">Escrever na tela</button>
+            <button class="btn btn-ghost btn-sm draw-clear" type="button">Limpar</button>
+          </div>
+          <p class="hero-caption">Lousa Digital DX 86", com Android 14, câmera e microfone integrados</p>
+        </div>
+        <div class="hero-curtain" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ANATOMIA ----------------------------------------------------------->
+    <section class="anatomy" id="produto" data-theme="light" aria-labelledby="anatomy-title">
+      <div class="anatomy-sticky">
+        <canvas class="anatomy-canvas" id="anatomy-canvas" aria-hidden="true"></canvas>
+        <div class="wrap anatomy-layout">
+          <header class="anatomy-head">
+            <h2 id="anatomy-title" class="h2">Cinco camadas entre o seu dedo e a imagem.</h2>
+            <p class="lead">Role a página para abrir uma Lousa Digital Qualipix, da frente para trás.</p>
+          </header>
+          <ol class="layers" role="list">
+            <li class="layer is-active" data-layer="0">
+              <span class="layer-n">1</span>
+              <h3>Vidro antirreflexo ultrarresistente</h3>
+              <p>É o que você toca. O tratamento antirreflexo mantém a imagem nítida perto de janelas e com a luz da sala acesa.</p>
+            </li>
+            <li class="layer" data-layer="1">
+              <span class="layer-n">2</span>
+              <h3>Moldura de sensores infravermelho</h3>
+              <p>Uma grade invisível de feixes cruza o vidro e detecta dedos, ponteiras e a caneta magnética.</p>
+              <ul class="specs" role="list"><li>20 toques simultâneos</li><li>Precisão de 2 mm</li><li>Resposta abaixo de 5 ms</li></ul>
+            </li>
+            <li class="layer" data-layer="2">
+              <span class="layer-n">3</span>
+              <h3>Painel 4K</h3>
+              <p>3.840 × 2.160 pixels, até 2× o brilho de uma TV comum e ângulo de visão de 178°: o fundo da sala vê o mesmo que a primeira fila.</p>
+              <ul class="specs" role="list"><li>350 cd/m²</li><li>Contraste 3000:1</li><li>60.000 horas de vida útil</li></ul>
+            </li>
+            <li class="layer" data-layer="3">
+              <span class="layer-n">4</span>
+              <h3>Android 14 embarcado</h3>
+              <p>Na linha DX, navegue, abra documentos Office e use apps da Play Store sem computador. Câmera e microfone integrados para videochamadas.</p>
+              <ul class="specs" role="list"><li>8 GB de RAM</li><li>128 GB</li><li>Som 15 W × 2</li></ul>
+            </li>
+            <li class="layer" data-layer="4">
+              <span class="layer-n">5</span>
+              <h3>Chassi metálico e suporte de parede</h3>
+              <p>Estrutura em metal com suporte de parede na caixa. Entradas HDMI e USB para ligar o seu computador quando quiser.</p>
+              <ul class="specs" role="list"><li>Windows, macOS, Linux e Chrome OS</li><li>Garantia de 2 anos</li></ul>
+            </li>
+          </ol>
+          <div class="loupe" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUTOS ----------------------------------------------------------->
+    <section class="family" id="produtos" data-theme="light" aria-labelledby="family-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="family-title" class="h2">Uma linha para cada sala.</h2>
+          <p class="lead">Do display tudo em um à moldura que deixa touch a TV que você já tem.</p>
+        </header>
+      </div>
+      <div class="rail" tabindex="0" aria-label="Produtos Qualipix. Role para os lados para ver todos.">
+        <article class="product" id="lousa-digital">
+          <div class="product-img"><img src="assets/renders/lousa.webp" alt="Lousa Digital Qualipix com tela 4K exibindo um quadro interativo" loading="lazy" width="1200" height="900"></div>
+          <div class="product-body">
+            <h3>Lousa Digital</h3>
+            <p class="product-what">Tela 4K com touch nativo, tudo em um.</p>
+            <dl class="product-specs">
+              <div><dt>Linha SX</dt><dd>32", 43" e 55". Usa o seu computador.</dd></div>
+              <div><dt>Linha DX</dt><dd>65", 75", 86" e 98". Android 14, 8 GB de RAM, câmera e microfone.</dd></div>
+              <div><dt>Toque</dt><dd>20 pontos, precisão de 2 mm</dd></div>
+            </dl>
+            <a class="link" href="#contato" data-product="Lousa Digital">Pedir orçamento</a>
+          </div>
+        </article>
+        <article class="product" id="moldura-touch">
+          <div class="product-img"><img src="assets/renders/moldura.webp" alt="Moldura Touch Qualipix encaixada em uma TV" loading="lazy" width="1200" height="900"></div>
+          <div class="product-body">
+            <h3>Moldura Touch</h3>
+            <p class="product-what">Transforma a sua TV comum em tela touch.</p>
+            <dl class="product-specs">
+              <div><dt>Tamanhos</dt><dd>32" a 85"</dd></div>
+              <div><dt>Vidro</dt><dd>Ultrarresistente, 4 mm</dd></div>
+              <div><dt>Conexão</dt><dd>USB, sem driver. Windows, macOS e Linux.</dd></div>
+            </dl>
+            <a class="link" href="#contato" data-product="Moldura Touch">Pedir orçamento</a>
+          </div>
+        </article>
+        <article class="product" id="quadro-hibrido-produto">
+          <div class="product-img"><img src="assets/renders/quadro.webp" alt="Quadro Híbrido Qualipix: quadro branco cerâmico com lousa digital no centro" loading="lazy" width="1200" height="900"></div>
+          <div class="product-body">
+            <h3>Quadro Híbrido</h3>
+            <p class="product-what">Quadro branco cerâmico e lousa digital no mesmo conjunto.</p>
+            <dl class="product-specs">
+              <div><dt>Medidas</dt><dd>4,00 × 1,30 m ou 3,20 × 1,30 m</dd></div>
+              <div><dt>Display</dt><dd>65", 75" ou 86", com OPS-PC Intel i5</dd></div>
+              <div><dt>Inclui</dt><dd>Instalação, treinamento e 12 meses de QualipixClass</dd></div>
+            </dl>
+            <a class="link" href="#contato" data-product="Quadro Híbrido">Pedir orçamento</a>
+          </div>
+        </article>
+        <article class="product" id="totem-interativo">
+          <div class="product-img"><img src="assets/renders/totem.webp" alt="Totem Interativo Qualipix com tela inclinada sobre base de piso" loading="lazy" width="1200" height="900"></div>
+          <div class="product-body">
+            <h3>Totem Interativo</h3>
+            <p class="product-what">Autoatendimento, cadastro e mídia em pé.</p>
+            <dl class="product-specs">
+              <div><dt>Tamanhos</dt><dd>32", 43" e 55"</dd></div>
+              <div><dt>Computador</dt><dd>OPS-PC i5 10ª geração, 16 GB, 256 GB SSD, Windows 11</dd></div>
+              <div><dt>Estrutura</dt><dd>Metal, base de piso estável e inclinação de fábrica</dd></div>
+            </dl>
+            <a class="link" href="#contato" data-product="Totem Interativo">Pedir orçamento</a>
+          </div>
+        </article>
+        <article class="product" id="flip-chart">
+          <div class="product-img"><img src="assets/renders/flip.webp" alt="Flip Chart Digital Qualipix com tela vertical em pedestal com rodízios" loading="lazy" width="1200" height="900"></div>
+          <div class="product-body">
+            <h3>Flip Chart Digital</h3>
+            <p class="product-what">Para reuniões rápidas: leva, liga e usa.</p>
+            <dl class="product-specs">
+              <div><dt>Tamanhos</dt><dd>43" e 55", em 4K</dd></div>
+              <div><dt>Pedestal</dt><dd>Ajuste de altura, bandeja para notebook e rodízios</dd></div>
+              <div><dt>Inclui</dt><dd>OPS-PC, 2 canetas e software de anotação</dd></div>
+            </dl>
+            <a class="link" href="#contato" data-product="Flip Chart Digital">Pedir orçamento</a>
+          </div>
+        </article>
+        <article class="product" id="lousa-branca">
+          <div class="product-img"><img src="assets/renders/max80.webp" alt="Lousa Branca Interativa Max80 com projetor de curta distância" loading="lazy" width="1200" height="900"></div>
+          <div class="product-body">
+            <h3>Lousa Branca Interativa Max80</h3>
+            <p class="product-what">Deixa touch a imagem do seu projetor.</p>
+            <dl class="product-specs">
+              <div><dt>Tamanho</dt><dd>80", superfície em alumínio branco fosco</dd></div>
+              <div><dt>Toque</dt><dd>Até 10 toques simultâneos</dd></div>
+              <div><dt>Requer</dt><dd>Projetor e computador</dd></div>
+            </dl>
+            <a class="link" href="#contato" data-product="Lousa Branca Interativa Max80">Pedir orçamento</a>
+          </div>
+        </article>
+      </div>
+      <div class="wrap rail-controls">
+        <button class="round-btn" data-rail="-1" aria-label="Produto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="round-btn" data-rail="1" aria-label="Próximo produto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="rail-progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- FILME 1: MOLDURA -------------------------------------------------->
+    <section class="film" id="moldura" data-theme="dark" data-video="assets/video/moldura.mp4" aria-labelledby="film1-title">
+      <div class="film-sticky">
+        <video class="film-video" muted playsinline preload="auto" poster="assets/video/moldura-poster.webp" aria-hidden="true"></video>
+        <div class="film-shade" aria-hidden="true"></div>
+        <div class="wrap film-layout">
+          <h2 id="film1-title" class="h2">A TV que você já tem, agora com touch.</h2>
+          <ol class="film-steps" role="list">
+            <li data-at="0"><span class="step-n">1</span><div><h3>A TV continua na parede</h3><p>Funciona em TVs de 32" a 85". Recomendamos LG e Samsung; para outras marcas, conferimos as medidas antes.</p></div></li>
+            <li data-at="0.34"><span class="step-n">2</span><div><h3>A moldura encaixa por fora</h3><p>Vidro de 4 mm e sensores infravermelho, fixados com o kit que vem na caixa.</p></div></li>
+            <li data-at="0.68"><span class="step-n">3</span><div><h3>Um cabo USB e pronto</h3><p>Sem driver: conecte ao computador e a tela passa a reconhecer 20 toques ao mesmo tempo.</p></div></li>
+          </ol>
+          <div class="film-bar" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILME 2: QUADRO HÍBRIDO ------------------------------------------->
+    <section class="film film-alt" id="quadro-hibrido" data-theme="dark" data-video="assets/video/quadro.mp4" aria-labelledby="film2-title">
+      <div class="film-sticky">
+        <video class="film-video" muted playsinline preload="auto" poster="assets/video/quadro-poster.webp" aria-hidden="true"></video>
+        <div class="film-shade" aria-hidden="true"></div>
+        <div class="wrap film-layout">
+          <h2 id="film2-title" class="h2">O quadro branco fica. A lousa digital chega.</h2>
+          <ol class="film-steps" role="list">
+            <li data-at="0"><span class="step-n">1</span><div><h3>Escreva com pincel, como sempre</h3><p>Superfície em aço cerâmico, resistente a riscos e manchas, com 3 anos de garantia.</p></div></li>
+            <li data-at="0.36"><span class="step-n">2</span><div><h3>Deslize os painéis</h3><p>Os quadros correm no trilho e revelam o display de 65", 75" ou 86".</p></div></li>
+            <li data-at="0.66"><span class="step-n">3</span><div><h3>Aula pronta em segundos</h3><p>A plataforma QualipixClass traz mais de 6.000 materiais prontos e IA que sugere atividades e monta slides.</p></div></li>
+          </ol>
+          <div class="film-bar" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAMANHOS ----------------------------------------------------------->
+    <section class="sizes" id="tamanhos" data-theme="light" aria-labelledby="sizes-title">
+      <div class="wrap sizes-grid">
+        <header class="sizes-head">
+          <h2 id="sizes-title" class="h2">Qual tamanho cabe na sua sala?</h2>
+          <p class="lead">Compare os sete tamanhos da Lousa Digital com uma pessoa de 1,70 m e uma porta padrão.</p>
+          <div class="size-readout" aria-live="polite">
+            <p class="size-big"><span id="size-num">86</span><span class="size-unit">"</span></p>
+            <p class="size-line" id="size-line">Linha DX</p>
+            <dl class="size-facts">
+              <div><dt>Área de imagem</dt><dd id="size-area">1,90 × 1,07 m</dd></div>
+              <div><dt>Medida externa</dt><dd id="size-ext">1,96 × 1,17 m</dd></div>
+              <div><dt>Leitura confortável</dt><dd id="size-dist">até 6,4 m</dd></div>
+            </dl>
+            <p class="fine">Medidas aproximadas. A distância segue a referência de mercado de 6× a altura da imagem.</p>
+          </div>
+        </header>
+        <div class="size-stage">
+          <svg class="size-svg" id="size-svg" viewBox="0 0 640 400" role="img" aria-label="Parede com a lousa no tamanho escolhido, ao lado de uma porta e de uma pessoa">
+            <defs>
+              <linearGradient id="scr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9FBFE"/><stop offset="1" stop-color="#BDEFF7"/></linearGradient>
+            </defs>
+            <line class="size-floor" x1="0" y1="360" x2="640" y2="360"/>
+            <g class="size-door"><rect x="40" y="150" width="80" height="210"/><circle cx="108" cy="262" r="3"/></g>
+            <g class="size-person" transform="translate(520 360)"><circle cx="0" cy="-158" r="11"/><path d="M-15 -140 h30 l6 72 h-10 l-3 68 h-8 l-3 -58 h-2 l-3 58 h-8 l-3 -68 h-10 z"/></g>
+            <g class="size-board" id="size-board"><rect class="size-body" id="size-body" x="0" y="0" width="10" height="10" rx="2"/><rect class="size-screen" id="size-screen" x="0" y="0" width="10" height="10"/></g>
+            <g class="size-dim" id="size-dim"><line id="dim-line" x1="0" y1="0" x2="0" y2="0"/><text id="dim-text" x="0" y="0" text-anchor="middle"></text></g>
+          </svg>
+          <div class="size-control">
+            <label for="size-range" class="sr-only">Tamanho da tela em polegadas</label>
+            <input type="range" id="size-range" min="0" max="6" step="1" value="5" aria-valuetext='86 polegadas'>
+            <div class="size-ticks" aria-hidden="true"><span>32"</span><span>43"</span><span>55"</span><span>65"</span><span>75"</span><span>86"</span><span>98"</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO ESCOLHER ------------------------------------------------------>
+    <section class="chooser" id="escolher" data-theme="light" aria-labelledby="chooser-title">
+      <div class="wrap chooser-grid">
+        <div class="chooser-q">
+          <h2 id="chooser-title" class="h2">Qual solução escolher?</h2>
+          <p class="lead">Responda três perguntas e indicamos o equipamento. Depois, um especialista confirma com você em 10 minutos.</p>
+          <fieldset class="q" data-q="lugar">
+            <legend><span class="q-n">1</span> Onde vai ser usado?</legend>
+            <div class="chips">
+              <label><input type="radio" name="lugar" value="aula"><span>Sala de aula</span></label>
+              <label><input type="radio" name="lugar" value="reuniao"><span>Sala de reunião</span></label>
+              <label><input type="radio" name="lugar" value="recepcao"><span>Recepção ou loja</span></label>
+              <label><input type="radio" name="lugar" value="eventos"><span>Eventos e palestras</span></label>
+              <label><input type="radio" name="lugar" value="consultorio"><span>Consultório</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="q" data-q="tem">
+            <legend><span class="q-n">2</span> O que já existe no espaço?</legend>
+            <div class="chips">
+              <label><input type="radio" name="tem" value="nada"><span>Nada ainda</span></label>
+              <label><input type="radio" name="tem" value="tv"><span>Uma TV boa</span></label>
+              <label><input type="radio" name="tem" value="projetor"><span>Um projetor</span></label>
+              <label><input type="radio" name="tem" value="quadro"><span>Um quadro branco</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="q" data-q="prioridade">
+            <legend><span class="q-n">3</span> O que pesa mais na decisão?</legend>
+            <div class="chips">
+              <label><input type="radio" name="prioridade" value="completo"><span>Tudo em um, sem computador</span></label>
+              <label><input type="radio" name="prioridade" value="economia"><span>Menor investimento</span></label>
+              <label><input type="radio" name="prioridade" value="mobilidade"><span>Levar de uma sala para outra</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <aside class="chooser-result" aria-live="polite">
+          <div class="result-empty">
+            <p class="result-kicker">Sua indicação aparece aqui</p>
+            <p>Comece pela primeira pergunta.</p>
+          </div>
+          <div class="result-card" hidden>
+            <img class="result-img" src="assets/renders/lousa.webp" alt="" width="1200" height="900">
+            <p class="result-kicker">Indicação para você</p>
+            <h3 class="result-name">Lousa Digital DX</h3>
+            <p class="result-why"></p>
+            <a class="btn btn-primary result-cta" href="#contato">Pedir orçamento deste modelo</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SEGMENTOS ---------------------------------------------------------->
+    <section class="segments" id="segmentos" data-theme="light" aria-labelledby="seg-title">
+      <div class="wrap">
+        <header class="section-head">
+          <h2 id="seg-title" class="h2">Onde tem inovação, #temQualipix.</h2>
+        </header>
+        <div class="seg-grid">
+          <div class="seg-tabs" role="tablist" aria-label="Segmentos">
+            <button role="tab" id="tab-edu" aria-controls="seg-edu" aria-selected="true">Educação</button>
+            <button role="tab" id="tab-corp" aria-controls="seg-corp" aria-selected="false" tabindex="-1">Corporativo</button>
+            <button role="tab" id="tab-gov" aria-controls="seg-gov" aria-selected="false" tabindex="-1">Governo</button>
+            <button role="tab" id="tab-saude" aria-controls="seg-saude" aria-selected="false" tabindex="-1">Saúde</button>
+            <button role="tab" id="tab-eventos" aria-controls="seg-eventos" aria-selected="false" tabindex="-1">Eventos</button>
+          </div>
+          <div class="seg-panels">
+            <div class="seg-panel" role="tabpanel" id="seg-edu" aria-labelledby="tab-edu">
+              <h3>Aulas mais interativas, alunos mais engajados.</h3>
+              <p>Lousas digitais, quadro híbrido e plataforma educacional para salas de aula, laboratórios, bibliotecas, auditórios e salas de formação. A interação é feita com os dedos ou com a caneta magnética de ponta fina.</p>
+              <ul class="tags" role="list"><li>Lousa Digital</li><li>Quadro Híbrido</li><li>QualipixClass</li></ul>
+            </div>
+            <div class="seg-panel" role="tabpanel" id="seg-corp" aria-labelledby="tab-corp" hidden>
+              <h3>Reuniões mais produtivas.</h3>
+              <p>Para salas de reunião, treinamentos, feiras de negócios, lojas, recepções e áreas de espera. Design high tech com robustez para ambientes com grande fluxo de pessoas.</p>
+              <ul class="tags" role="list"><li>Lousa Digital</li><li>Moldura Touch</li><li>Flip Chart Digital</li><li>Totem Interativo</li></ul>
+            </div>
+            <div class="seg-panel" role="tabpanel" id="seg-gov" aria-labelledby="tab-gov" hidden>
+              <h3>Mais aprendizado e mais inclusão na educação pública.</h3>
+              <p>O Quadro Híbrido foi desenvolvido para o uso intenso das escolas públicas: superfície em aço cerâmico com 3 anos de garantia, lousa digital integrada e plataforma pedagógica com mais de 6.000 materiais e ferramentas de IA. Instalação e treinamento inclusos.</p>
+              <ul class="tags" role="list"><li>Quadro Híbrido</li><li>QualipixClass</li></ul>
+            </div>
+            <div class="seg-panel" role="tabpanel" id="seg-saude" aria-labelledby="tab-saude" hidden>
+              <h3>Exames explicados com clareza ao paciente.</h3>
+              <p>Apresente radiografias, tomografias, exames e planejamentos em uma tela 4K touch, com riqueza de detalhes. A conversa entre profissional e paciente fica mais clara e mais confiante.</p>
+              <ul class="tags" role="list"><li>Lousa Digital</li><li>Moldura Touch</li></ul>
+            </div>
+            <div class="seg-panel" role="tabpanel" id="seg-eventos" aria-labelledby="tab-eventos" hidden>
+              <h3>Experiências que o público lembra.</h3>
+              <p>Totens e lousas digitais para feiras e exposições: apresente produtos, faça cadastros e capte contatos no ponto de encontro com o público.</p>
+              <ul class="tags" role="list"><li>Totem Interativo</li><li>Lousa Digital</li><li>Flip Chart Digital</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL ------------------------------------------------------->
+    <section class="proof" id="clientes" data-theme="light" aria-labelledby="proof-title">
+      <div class="wrap">
+        <h2 id="proof-title" class="h3-title">Empresas que confiam na Qualipix</h2>
+      </div>
+      <div class="marquee" aria-label="Logos de clientes">
+        <div class="marquee-track">
+          <img src="assets/img/clientes/globo.jpg" alt="Rede Globo" width="153" height="153">
+          <img src="assets/img/clientes/cbf.jpg" alt="CBF" width="153" height="153">
+          <img src="assets/img/clientes/gm.jpg" alt="General Motors" width="153" height="153">
+          <img src="assets/img/clientes/dhl.jpg" alt="DHL" width="153" height="153">
+          <img src="assets/img/clientes/fiat.jpg" alt="Fiat" width="153" height="153">
+          <img src="assets/img/clientes/electrolux.jpg" alt="Electrolux" width="153" height="153">
+          <img src="assets/img/clientes/panasonic.jpg" alt="Panasonic" width="153" height="153">
+          <img src="assets/img/clientes/cruzeiro.jpg" alt="Cruzeiro Esporte Clube" width="153" height="153">
+          <img src="assets/img/clientes/ccaa.jpg" alt="CCAA" width="153" height="153">
+          <img src="assets/img/clientes/cna.jpg" alt="CNA" width="153" height="153">
+        </div>
+      </div>
+      <div class="wrap">
+        <h3 class="installs-title">Do estúdio de TV à sala de aula</h3>
+        <ul class="installs" role="list">
+          <li><figure><img src="assets/img/instalacoes/globonews.png" alt="Display Qualipix no estúdio da GloboNews" loading="lazy" width="233" height="230"><figcaption>Estúdio GloboNews</figcaption></figure></li>
+          <li><figure><img src="assets/img/instalacoes/mgtv.png" alt="Display no estúdio do MGTV" loading="lazy" width="233" height="230"><figcaption>Estúdio MGTV</figcaption></figure></li>
+          <li><figure><img src="assets/img/instalacoes/unoeste.png" alt="Displays em laboratório da Unoeste" loading="lazy" width="233" height="230"><figcaption>Laboratório Unoeste</figcaption></figure></li>
+          <li><figure><img src="assets/img/instalacoes/defesa-civil-mg.png" alt="Mesa interativa na Defesa Civil de Minas Gerais" loading="lazy" width="233" height="230"><figcaption>Defesa Civil MG</figcaption></figure></li>
+          <li><figure><img src="assets/img/instalacoes/quadro-hibrido.png" alt="Quadro Híbrido instalado em sala de reunião" loading="lazy" width="233" height="230"><figcaption>Quadro Híbrido em sala de reunião</figcaption></figure></li>
+          <li><figure><img src="assets/img/instalacoes/feira-odontologia.png" alt="Lousa digital mostrando radiografia em feira de odontologia" loading="lazy" width="233" height="230"><figcaption>Feira de odontologia</figcaption></figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EMPRESA ------------------------------------------------------------>
+    <section class="about" id="empresa" data-theme="dark" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-text">
+          <h2 id="about-title" class="h2">Fabricante brasileira desde 2012.</h2>
+          <p class="lead">A Qualipix fabrica lousas digitais, molduras interativas, quadros híbridos, totens e lousas brancas interativas de 32" a 98". A equipe está no mercado desde 1999 e atende todo o Brasil a partir de duas unidades.</p>
+        </div>
+        <ul class="perks" role="list">
+          <li><h3>Suporte humanizado</h3><p>Atendimento por WhatsApp e chamada de vídeo, com gente que conhece o equipamento.</p></li>
+          <li><h3>Garantia de 2 anos</h3><p>3 meses de garantia legal e mais 21 meses concedidos pela Qualipix.</p></li>
+          <li><h3>Entrega em todo o Brasil</h3><p>Em poucos dias o equipamento está pronto para usar na sua sala.</p></li>
+          <li><h3>Showroom em São Paulo</h3><p>Veja os produtos funcionando antes de decidir, na Alameda Santos.</p></li>
+        </ul>
+        <div class="units">
+          <div class="unit">
+            <h3>São Paulo, showroom</h3>
+            <p>Alameda Santos, 1773, conj. 1003<br>Cerqueira César, São Paulo/SP<br>CEP 01419-100</p>
+            <p><a href="tel:+551126904299">(11) 2690-4299</a>, WhatsApp e telefone</p>
+            <a class="link link-light" href="https://www.google.com/maps/search/?api=1&query=Alameda+Santos+1773+S%C3%A3o+Paulo" target="_blank" rel="noopener">Abrir no mapa</a>
+          </div>
+          <div class="unit">
+            <h3>Belo Horizonte, matriz</h3>
+            <p>Rua das Canoas, 970<br>Betânia, Belo Horizonte/MG<br>CEP 30570-068</p>
+            <p><a href="tel:+553135686835">(31) 3568-6835</a>, telefone</p>
+            <a class="link link-light" href="https://www.google.com/maps/search/?api=1&query=Rua+das+Canoas+970+Belo+Horizonte" target="_blank" rel="noopener">Abrir no mapa</a>
+          </div>
+          <div class="unit">
+            <h3>Suporte técnico</h3>
+            <p>Dúvidas de instalação e uso do equipamento.</p>
+            <p><a href="https://wa.me/5531991577018" target="_blank" rel="noopener">(31) 99157-7018</a>, WhatsApp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ------------------------------------------------------------>
+    <section class="faq" id="duvidas" data-theme="light" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <h2 id="faq-title" class="h2">Perguntas frequentes</h2>
+        <div class="faq-list">
+          <details><summary>Quais tamanhos estão disponíveis?</summary><p>Lousas digitais de 32" a 98", molduras touch de 32" a 85" e Quadro Híbrido em 4,00 × 1,30 m ou 3,20 × 1,30 m. O Flip Chart Digital tem 43" e 55", e o Totem 32", 43" e 55".</p></details>
+          <details><summary>Posso comprar ou alugar?</summary><p>No momento a Qualipix trabalha somente com venda de equipamentos.</p></details>
+          <details><summary>Qual é a garantia?</summary><p>2 anos: 3 meses de garantia legal e mais 21 meses concedidos pela Qualipix. No Quadro Híbrido, a superfície de escrita tem 3 anos de garantia.</p></details>
+          <details><summary>Qual é a resolução das telas?</summary><p>4K, 3.840 × 2.160 pixels. A exceção é o Totem de 32", que é Full HD.</p></details>
+          <details><summary>Posso usar o meu computador?</summary><p>Sim. As lousas são compatíveis com Windows, macOS, Linux e Chrome OS. A linha SX funciona sempre com um computador; a linha DX também tem Android 14 embarcado.</p></details>
+          <details><summary>Dá para baixar aplicativos da Play Store?</summary><p>Sim, na linha DX, desde que o aplicativo seja compatível com displays 4K.</p></details>
+          <details><summary>O que vem na caixa da Lousa Digital?</summary><p>Suporte de parede, cabo USB, controle remoto, 2 ponteiras e cabo de energia.</p></details>
+          <details><summary>Quanto tempo leva a entrega?</summary><p>Poucos dias. Entregamos em todo o Brasil; o Quadro Híbrido é entregue nas regiões Sul e Sudeste.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO ------------------------------------------------------------>
+    <section class="contact" id="contato" data-theme="dark" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-text">
+          <h2 id="contact-title" class="h2">Agende uma demonstração.</h2>
+          <p class="lead">Conte o que você precisa. A mensagem abre no WhatsApp da Qualipix já preenchida, e um especialista responde em horário comercial.</p>
+          <p class="contact-alt">Prefere e-mail? <a href="mailto:contato@qualipix.com.br">contato@qualipix.com.br</a></p>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field"><label for="f-nome">Nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+          <div class="field"><label for="f-org">Empresa ou escola</label><input id="f-org" name="org" autocomplete="organization"></div>
+          <div class="field"><label for="f-tel">Telefone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field"><label for="f-area">Área de atuação</label>
+            <select id="f-area" name="area"><option>Educação</option><option>Corporativo</option><option>Governo</option><option>Saúde</option><option>Eventos</option></select>
+          </div>
+          <div class="field field-wide"><label for="f-msg">O que você precisa?</label><textarea id="f-msg" name="msg" rows="4" placeholder="Ex.: 3 lousas de 75 polegadas para salas de aula"></textarea></div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn-primary btn-lg" type="submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-theme="dark">
+    <div class="wrap footer-grid">
+      <a class="brand brand-footer" href="#inicio" aria-label="Qualipix">
+        <img class="logo-light" src="assets/img/logo-qualipix-branco.png" alt="Qualipix" width="350" height="93"><img class="logo-dark" src="assets/img/logo-qualipix.png" alt="" width="350" height="93">
+      </a>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <a href="#produtos">Produtos</a>
+        <a href="#tamanhos">Tamanhos</a>
+        <a href="#escolher">Como escolher</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="https://www.instagram.com/qualipix/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p class="legal">© 2026 Qualipix Tecnologia em Equipamentos Audiovisuais Ltda. CNPJ 16.915.236/0001-98.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/551126904299?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Qualipix." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5.1 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.5z"/></svg>
+  </a>
+</body>
+</html>
