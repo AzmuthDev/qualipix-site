@@ -45,9 +45,10 @@ Para conferir um quadro específico antes de renderizar tudo: `node tools/render
 
 ## Contatos usados no site
 
-- WhatsApp e telefone SP: (11) 2690-4299
+- WhatsApp SP: (11) 97175-6835
+- Telefone SP: (11) 2690-4299
 - Telefone BH: (31) 3568-6835
 - Suporte técnico (WhatsApp): (31) 99157-7018
 - contato@qualipix.com.br
 
-O formulário de contato não guarda dados: ele monta a mensagem e abre o WhatsApp da unidade SP.
+O formulário de contato não guarda dados: ele monta a mensagem e abre o WhatsApp (11) 97175-6835 (unidade SP).

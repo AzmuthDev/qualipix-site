@@ -4,7 +4,7 @@ const root = document.documentElement;
 root.classList.add('js');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const coarse = matchMedia('(pointer: coarse)').matches;
-const WA = '551126904299';
+const WA = '5511971756835';
 const header = document.querySelector('.site-header');
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a)); return t * t * (3 - 2 * t); };
@@ -327,7 +327,7 @@ const R = {
   sx: { name: 'Lousa Digital SX', img: 'lousa', why: 'Tela 4K com touch nativo de 32" a 55" que usa o computador que você já tem. O caminho mais direto para uma tela interativa de verdade.' },
   sxSaude: { name: 'Lousa Digital SX 55"', img: 'lousa', why: 'Tamanho certo para mostrar exames de perto ao paciente, em 4K e ligada ao computador do consultório.' },
   moldura: { name: 'Moldura Touch', img: 'moldura', why: 'Você aproveita a TV que já está na parede e adiciona 20 pontos de toque com investimento menor. Brilho e qualidade de escrita acompanham a TV.' },
-  max80: { name: 'Lousa Branca Interativa Max80', img: 'max80', why: 'Usa o seu projetor e o seu computador: é o menor investimento inicial. Funciona melhor em salas com pouca luz.' },
+  max80: { name: 'Lousa Branca Interativa Max80i', img: 'max80', why: 'Usa o seu projetor e o seu computador: é o menor investimento inicial. Funciona melhor em salas com pouca luz.' },
   totem: { name: 'Totem Interativo', img: 'totem', why: 'Feito para uso em pé: check-in, cadastro, cardápio e mídia, com computador embutido e base de piso estável.' },
   flip: { name: 'Flip Chart Digital', img: 'flip', why: 'Em pedestal com rodízios e ajuste de altura: vai de uma sala para outra e liga pronto para anotar.' },
   quadro: { name: 'Quadro Híbrido', img: 'quadro', why: 'Mantém o quadro branco que todo mundo domina e soma a lousa digital no centro, com 6.000 materiais prontos, IA, instalação e treinamento inclusos.' },
