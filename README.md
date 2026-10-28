@@ -63,17 +63,20 @@ Documentação completa do processo (caminhos, SEO, medição, checklist): https
 | `js/consent.js` | Aviso de cookies (LGPD), Consent Mode do Google e Google Tag Manager `GTM-WZBGG23`, carregado só em produção e após o aceite. Envia ao `dataLayer` os eventos `whatsapp_click`, `phone_click`, `email_click`, `quote_request` e `generate_lead`. |
 | `privacidade.html` | Política de privacidade (rascunho para revisão jurídica do cliente). |
 | `404.html` | Página de endereço inexistente. |
-| `seo/urls.csv` | Inventário das 63 URLs do site atual, com grupo e destino no caminho 3. Preencha `cliques_90_dias` com o Search Console. |
+| `seo/urls.csv` | Inventário de 68 URLs do site atual (63 do sitemap e 5 encontradas no Google fora dele): grupo, assunto, página principal dos duplicados, se deve ser indexada, situação hoje, ação a fazer na Wbuy e destino no caminho 3. Preencha `cliques_90_dias` com o Search Console. |
+| `llms.txt` | Resumo do site para assistentes de IA (formato llmstxt.org), gerado com o domínio de `seo/config.json`. |
 | `seo/config.json` | Domínio oficial do novo site e endereço da loja. |
 | `deploy/nginx.staging.conf` | Configuração do Coolify para o ambiente de teste (cabeçalho `noindex`, arquivos internos bloqueados). |
 | `deploy/nginx.landing.conf` | Configuração para o caminho 2 (landing em endereço próprio). |
 | `deploy/nginx.home.conf` | Gerada: caminho 3, com os 301 das URLs antigas e o restante seguindo para a loja. |
 
-Depois de mudar `seo/config.json` ou `seo/urls.csv`, gere de novo `robots.txt`, `sitemap.xml`, os domínios das páginas e `deploy/nginx.home.conf`:
+Depois de mudar `seo/config.json` ou `seo/urls.csv`, gere de novo `robots.txt`, `sitemap.xml`, `llms.txt`, os domínios das páginas e `deploy/nginx.home.conf`:
 
 ```bash
 node tools/migration/build.mjs
 ```
+
+A coluna `situacao_hoje` foi conferida num navegador comum em 28/10/2026 para 24 URLs. O site da Wbuy recusa navegadores automatizados, então a situação das demais vem do relatório Páginas do Search Console.
 
 Para conferir um endereço publicado (sai com erro se algo falhar):
 

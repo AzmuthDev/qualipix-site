@@ -8,6 +8,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readInventory } from './csv.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const args = process.argv.slice(2);
@@ -59,6 +60,8 @@ const robots = await get('/robots.txt');
 const robotsTxt = robots.status === 200 ? await robots.text() : '';
 robots.status === 200 ? ok('robots.txt responde') : fail(`robots.txt respondeu ${robots.status}`);
 if (env === 'production' && /^Disallow:\s*\/\s*$/m.test(robotsTxt)) fail('robots.txt bloqueia o site inteiro');
+const llms = await get('/llms.txt');
+llms.status === 200 && /^# /.test(await llms.text()) ? ok('llms.txt responde') : warn('llms.txt ausente');
 const sm = await get('/sitemap.xml');
 const smTxt = sm.status === 200 ? await sm.text() : '';
 const locs = [...smTxt.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
@@ -108,10 +111,9 @@ else nf.status === 404 ? ok('endereço inexistente responde 404') : warn(`endere
 
 // 11. URLs antigas (caminho 3)
 if (checkRedirects) {
-  const lines = fs.readFileSync(path.join(ROOT, 'seo/urls.csv'), 'utf8').trim().split(/\r?\n/).slice(1);
+  const lines = readInventory(path.join(ROOT, 'seo/urls.csv'));
   let good = 0;
-  for (const line of lines) {
-    const [url, , destino] = line.split(',');
+  for (const { url_atual: url, destino_caminho_3: destino } of lines) {
     if (url === '/') continue;
     const r = await get(url);
     const loc = r.headers.get('location') || '';
