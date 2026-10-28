@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /deploy/
+Disallow: /seo/
+
+Sitemap: https://www.qualipix.com.br/sitemap.xml

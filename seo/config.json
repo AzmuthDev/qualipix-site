@@ -1,0 +1,8 @@
+{
+  "siteUrl": "https://www.qualipix.com.br",
+  "lojaUrl": "https://loja.qualipix.com.br",
+  "pages": [
+    { "path": "/", "changefreq": "monthly", "priority": "1.0" },
+    { "path": "/privacidade.html", "changefreq": "yearly", "priority": "0.3" }
+  ]
+}

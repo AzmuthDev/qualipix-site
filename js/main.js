@@ -1,4 +1,5 @@
 import { lousaDims, SIZES } from './products.js';
+import './consent.js';
 
 const root = document.documentElement;
 root.classList.add('js');
@@ -412,5 +413,6 @@ form.addEventListener('submit', (e) => {
     `Área: ${data.area}`,
     data.msg ? `Preciso de: ${data.msg}` : '',
   ].filter(Boolean);
+  window.dispatchEvent(new CustomEvent('qpx:lead', { detail: { source: 'form', area: data.area } }));
   window.open(waLink(lines.join('\n')), '_blank', 'noopener');
 });

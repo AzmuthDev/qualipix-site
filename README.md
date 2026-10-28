@@ -52,3 +52,33 @@ Para conferir um quadro específico antes de renderizar tudo: `node tools/render
 - contato@qualipix.com.br
 
 O formulário de contato não guarda dados: ele monta a mensagem e abre o WhatsApp (11) 97175-6835 (unidade SP).
+
+## Preparação da migração
+
+Documentação completa do processo (caminhos, SEO, medição, checklist): https://claude.ai/artifact/XqXZvWNVr9C61deHUCPBGA
+
+| Arquivo | Para que serve |
+| --- | --- |
+| `js/env.js` | Detecta o ambiente. Fora de `productionHosts` o site recebe `noindex` e não carrega tags. Ao escolher o caminho da migração, ajuste a lista (ex.: `lp.qualipix.com.br`). |
+| `js/consent.js` | Aviso de cookies (LGPD), Consent Mode do Google e Google Tag Manager `GTM-WZBGG23`, carregado só em produção e após o aceite. Envia ao `dataLayer` os eventos `whatsapp_click`, `phone_click`, `email_click`, `quote_request` e `generate_lead`. |
+| `privacidade.html` | Política de privacidade (rascunho para revisão jurídica do cliente). |
+| `404.html` | Página de endereço inexistente. |
+| `seo/urls.csv` | Inventário das 63 URLs do site atual, com grupo e destino no caminho 3. Preencha `cliques_90_dias` com o Search Console. |
+| `seo/config.json` | Domínio oficial do novo site e endereço da loja. |
+| `deploy/nginx.staging.conf` | Configuração do Coolify para o ambiente de teste (cabeçalho `noindex`, arquivos internos bloqueados). |
+| `deploy/nginx.landing.conf` | Configuração para o caminho 2 (landing em endereço próprio). |
+| `deploy/nginx.home.conf` | Gerada: caminho 3, com os 301 das URLs antigas e o restante seguindo para a loja. |
+
+Depois de mudar `seo/config.json` ou `seo/urls.csv`, gere de novo `robots.txt`, `sitemap.xml`, os domínios das páginas e `deploy/nginx.home.conf`:
+
+```bash
+node tools/migration/build.mjs
+```
+
+Para conferir um endereço publicado (sai com erro se algo falhar):
+
+```bash
+node tools/migration/check.mjs https://lpqualipix.googlar.com.br --env staging
+```
+
+Antes de colar qualquer arquivo de `deploy/` no Coolify, valide no terminal do servidor com `nginx -t`.

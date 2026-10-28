@@ -14,7 +14,8 @@ page.on('pageerror', (e) => errors.push(e.message));
 page.on('console', (m) => { if (m.type() === 'error' && !m.text().includes('404')) errors.push(m.text()); });
 const opened = [];
 await page.exposeFunction('__opened', (u) => opened.push(u));
-await page.evaluateOnNewDocument(() => { window.open = (u) => { window.__opened(u); return null; }; });
+// escolha de cookies já feita, para o aviso não cobrir os elementos testados
+await page.evaluateOnNewDocument(() => { try { localStorage.setItem('qpx-consent-v1', JSON.stringify({ v: 1, analytics: false, ads: false })); } catch {} window.open = (u) => { window.__opened(u); return null; }; });
 await page.goto(BASE + '/', { waitUntil: 'networkidle2' });
 await new Promise((r) => setTimeout(r, 4000));
 const results = {};
