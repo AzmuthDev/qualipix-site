@@ -81,8 +81,11 @@ for (const m of html.matchAll(/(?:src|href|poster|data-video)="([^"#]+)"/g)) {
 }
 const broken = [];
 for (const r of refs) {
+  if (/^\/(central|carrinho|checkout|login)(\/|$)/.test(r)) continue; // área do cliente fica na loja
   const res = await get(r, r.endsWith('.mp4') ? { headers: { Range: 'bytes=0-1' } } : { method: 'HEAD' });
-  if (![200, 206].includes(res.status)) broken.push(`${r} (${res.status})`);
+  // os links do menu sem barra final (ex.: /moldura-touch) repetem o site atual e redirecionam para a pasta
+  const toDir = [301, 302, 308].includes(res.status) && (res.headers.get('location') || '').replace(/^https?:\/\/[^/]+/, '') === r + '/';
+  if (![200, 206].includes(res.status) && !toDir) broken.push(`${r} (${res.status})`);
 }
 broken.length ? fail(`arquivos quebrados: ${broken.join(', ')}`) : ok(`${refs.size} arquivos referenciados respondem`);
 const vid = [...refs].find((r) => r.endsWith('.mp4'));

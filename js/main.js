@@ -1,5 +1,6 @@
 import { lousaDims, SIZES } from './products.js';
 import './consent.js';
+import { closeMenu } from './nav.js';
 
 const root = document.documentElement;
 root.classList.add('js');
@@ -55,21 +56,6 @@ document.addEventListener('click', (e) => {
   else el.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
   history.replaceState(null, '', id);
 });
-
-// ------------------------------------------------------------------- menu
-const toggle = document.querySelector('.menu-toggle');
-const mnav = document.getElementById('mobile-nav');
-function closeMenu() {
-  if (!toggle) return;
-  toggle.setAttribute('aria-expanded', 'false');
-  mnav.classList.remove('is-open');
-}
-toggle?.addEventListener('click', () => {
-  const open = toggle.getAttribute('aria-expanded') !== 'true';
-  toggle.setAttribute('aria-expanded', String(open));
-  mnav.classList.toggle('is-open', open);
-});
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
 // ---------------------------------------------- toque nos botões (feedback)
 document.addEventListener('pointerdown', (e) => {
@@ -241,7 +227,7 @@ function frame(t) {
 
   // cabeçalho
   const theme = themeAt(36);
-  if (theme !== lastTheme) { header.dataset.theme = theme; lastTheme = theme; }
+  if (theme !== lastTheme && !header.classList.contains('has-menu')) { header.dataset.theme = theme; lastTheme = theme; }
   header.classList.toggle('is-scrolled', scrollY > 8);
   document.querySelector('.wa-float')?.classList.toggle('is-on', scrollY > innerHeight * 1.2);
 

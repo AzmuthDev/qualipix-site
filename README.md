@@ -1,6 +1,6 @@
 # Site Qualipix
 
-Site institucional estático (HTML, CSS e JavaScript) da Qualipix, com cenas 3D em tempo real (Three.js) e vídeos de animação renderizados a partir dos mesmos modelos 3D.
+Site estático (HTML, CSS e JavaScript) da Qualipix, com cenas 3D em tempo real (Three.js) e vídeos de animação renderizados a partir dos mesmos modelos 3D. Além da página inicial, tem as páginas internas do site atual (produtos, preços, segmentos, institucionais e blog) nos mesmos caminhos de www.qualipix.com.br.
 
 ## Rodar localmente
 
@@ -14,7 +14,9 @@ Abre em http://localhost:8080. Não há etapa de build nem `package.json` na rai
 
 | Caminho | O que é |
 | --- | --- |
-| `index.html` | Página única com todas as seções |
+| `index.html` | Página inicial com todas as seções |
+| `css/pages.css`, `js/page.js`, `js/nav.js` | Páginas internas, cabeçalho com menus Produtos e Segmentos |
+| `tools/pages/` | Gerador das páginas internas (conteúdo em `tools/pages/content/`) |
 | `css/style.css` | Estilos e tokens de cor/tipografia |
 | `js/main.js` | Rolagem, seções fixadas, vídeos guiados pela rolagem, guia de escolha, tamanhos, formulário |
 | `js/hero.js` | Cena do topo: a lousa liga pelo "Q" de power e o visitante escreve na tela |
@@ -53,6 +55,29 @@ Para conferir um quadro específico antes de renderizar tudo: `node tools/render
 
 O formulário de contato não guarda dados: ele monta a mensagem e abre o WhatsApp (11) 97175-6835 (unidade SP).
 
+## Páginas internas
+
+As páginas são geradas a partir de `tools/pages/content/*.mjs` e gravadas na raiz, cada uma em `<caminho>/index.html`, com os mesmos caminhos e links do site atual:
+
+| Arquivo de conteúdo | Páginas |
+| --- | --- |
+| `produtos.mjs` | Páginas do menu Produtos (`/lousa-digital/`, `/moldura-touch/`, `/lousamax80/`, `/quadro-branco/`, `/totem-interativo/`, `/flip-chart/`) |
+| `loja.mjs` | Páginas com preço da loja, categorias (`/produtos/...`, `/acessorios/`...), serviços de instalação. Preços lidos no painel da Wbuy em 28/10/2026 |
+| `segmentos.mjs` | Menu Segmentos (`/corporativo/`...) e as listagens antigas `/segmentos/...` (com canonical para as do menu) |
+| `institucional.mjs` | Páginas `/m/...`, contato, dúvidas, trocas, catálogos, termos, avaliações e os endereços antigos que só redirecionam |
+| `extra.mjs` | QualipixClass (`/class/`) e Video Wall |
+| `blog.mjs` | Blog, a partir de `blog/posts-wbuy.json` (exportado do painel da Wbuy) |
+
+Depois de mudar o conteúdo, gere de novo as páginas, o sitemap e os redirecionamentos, e confira os links:
+
+```bash
+node tools/pages/build.mjs && node tools/migration/build.mjs && node tools/pages/check.mjs
+```
+
+O gerador também atualiza o cabeçalho e o rodapé de `index.html` (entre os comentários `layout:header` e `layout:footer`). Para capturas de revisão: `node tools/pages/check.mjs --shots 1440 /lousa-digital/ /fale-conosco/` (no Git Bash, prefixe com `MSYS_NO_PATHCONV=1`).
+
+As compras não passam por um carrinho: o botão "Comprar pelo WhatsApp" abre a conversa com o produto, o tamanho e o preço. Carrinho, área do cliente (`/central/`) e checkout continuam na loja da Wbuy.
+
 ## Preparação da migração
 
 Documentação completa do processo (caminhos, SEO, medição, checklist): https://claude.ai/artifact/XqXZvWNVr9C61deHUCPBGA
@@ -61,9 +86,9 @@ Documentação completa do processo (caminhos, SEO, medição, checklist): https
 | --- | --- |
 | `js/env.js` | Detecta o ambiente. Fora de `productionHosts` o site recebe `noindex` e não carrega tags. Ao escolher o caminho da migração, ajuste a lista (ex.: `lp.qualipix.com.br`). |
 | `js/consent.js` | Aviso de cookies (LGPD), Consent Mode do Google e Google Tag Manager `GTM-WZBGG23`, carregado só em produção e após o aceite. Envia ao `dataLayer` os eventos `whatsapp_click`, `phone_click`, `email_click`, `quote_request` e `generate_lead`. |
-| `privacidade.html` | Política de privacidade (rascunho para revisão jurídica do cliente). |
+| `m/politica-de-privacidade/` | Política de privacidade (rascunho para revisão jurídica do cliente), gerada de `tools/pages/content/privacidade.fragment.html`. |
 | `404.html` | Página de endereço inexistente. |
-| `seo/urls.csv` | Inventário de 68 URLs do site atual (63 do sitemap e 5 encontradas no Google fora dele): grupo, assunto, página principal dos duplicados, se deve ser indexada, situação hoje, ação a fazer na Wbuy e destino no caminho 3. Preencha `cliques_90_dias` com o Search Console. |
+| `seo/urls.csv` | Inventário de 104 URLs do site atual (63 do sitemap, 5 encontradas no Google e 36 do menu e do blog que não estão no sitemap): grupo, assunto, página principal dos duplicados, se deve ser indexada, situação hoje, ação a fazer na Wbuy e destino no caminho 3. Preencha `cliques_90_dias` com o Search Console. |
 | `llms.txt` | Resumo do site para assistentes de IA (formato llmstxt.org), gerado com o domínio de `seo/config.json`. |
 | `seo/config.json` | Domínio oficial do novo site e endereço da loja. |
 | `deploy/nginx.staging.conf` | Configuração do Coolify para o ambiente de teste (cabeçalho `noindex`, arquivos internos bloqueados). |

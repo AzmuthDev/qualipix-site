@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <script src="js/env.js?v=3"></script>
+  <script src="js/env.js?v=4"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Qualipix | Lousas digitais e displays interativos 4K</title>
   <meta name="description" content="Fabricante brasileira de lousas digitais 4K de 32 a 98 polegadas, molduras touch, quadros híbridos, totens e flip charts digitais para educação, empresas, governo, saúde e eventos.">
@@ -21,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Caveat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/pages.css?v=4">
   <script type="importmap">
     {
       "imports": {
@@ -32,37 +33,45 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script type="module" src="js/main.js?v=3"></script>
+  <script type="module" src="js/main.js?v=4"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://www.qualipix.com.br/#organizacao","name":"Qualipix","legalName":"Qualipix Tecnologia em Equipamentos Audiovisuais Ltda.","taxID":"16.915.236/0001-98","url":"https://www.qualipix.com.br/","logo":"https://www.qualipix.com.br/assets/img/logo-qualipix.png","foundingDate":"2012","email":"contato@qualipix.com.br","sameAs":["https://www.instagram.com/qualipix/"],"contactPoint":[{"@type":"ContactPoint","contactType":"sales","telephone":"+55-11-97175-6835","areaServed":"BR","availableLanguage":"pt-BR"},{"@type":"ContactPoint","contactType":"technical support","telephone":"+55-31-99157-7018","areaServed":"BR","availableLanguage":"pt-BR"}],"location":[{"@type":"Place","name":"Qualipix São Paulo (showroom)","telephone":"+55-11-2690-4299","address":{"@type":"PostalAddress","streetAddress":"Alameda Santos, 1773, conj. 1003","addressLocality":"São Paulo","addressRegion":"SP","postalCode":"01419-100","addressCountry":"BR"}},{"@type":"Place","name":"Qualipix Belo Horizonte (matriz)","telephone":"+55-31-3568-6835","address":{"@type":"PostalAddress","streetAddress":"Rua das Canoas, 970, Betânia","addressLocality":"Belo Horizonte","addressRegion":"MG","postalCode":"30570-068","addressCountry":"BR"}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quais tamanhos estão disponíveis?","acceptedAnswer":{"@type":"Answer","text":"Lousas digitais de 32\" a 98\", molduras touch de 32\" a 85\" e Quadro Híbrido em 4,00 × 1,30 m ou 3,20 × 1,30 m. O Flip Chart Digital tem 43\" e 55\", e o Totem 32\", 43\" e 55\"."}},{"@type":"Question","name":"Posso comprar ou alugar?","acceptedAnswer":{"@type":"Answer","text":"No momento a Qualipix trabalha somente com venda de equipamentos."}},{"@type":"Question","name":"Qual é a garantia?","acceptedAnswer":{"@type":"Answer","text":"2 anos: 3 meses de garantia legal e mais 21 meses concedidos pela Qualipix. No Quadro Híbrido, a superfície de escrita tem 3 anos de garantia."}},{"@type":"Question","name":"Qual é a resolução das telas?","acceptedAnswer":{"@type":"Answer","text":"4K, 3.840 × 2.160 pixels. A exceção é o Totem de 32\", que é Full HD."}},{"@type":"Question","name":"Posso usar o meu computador?","acceptedAnswer":{"@type":"Answer","text":"Sim. As lousas são compatíveis com Windows, macOS, Linux e Chrome OS. A linha SX funciona sempre com um computador; a linha DX também tem Android 14 embarcado."}},{"@type":"Question","name":"Dá para baixar aplicativos da Play Store?","acceptedAnswer":{"@type":"Answer","text":"Sim, na linha DX, desde que o aplicativo seja compatível com displays 4K."}},{"@type":"Question","name":"O que vem na caixa da Lousa Digital?","acceptedAnswer":{"@type":"Answer","text":"Suporte de parede, cabo USB, controle remoto, 2 ponteiras e cabo de energia."}},{"@type":"Question","name":"Quanto tempo leva a entrega?","acceptedAnswer":{"@type":"Answer","text":"Poucos dias. Entregamos em todo o Brasil; o Quadro Híbrido é entregue nas regiões Sul e Sudeste."}}]}</script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
+  <!-- layout:header (gerado por tools/pages/build.mjs) -->
   <header class="site-header" data-theme="dark">
     <div class="wrap header-row">
-      <a class="brand" href="#inicio" aria-label="Qualipix, voltar ao início">
-        <img class="logo-light" src="assets/img/logo-qualipix-branco.png" alt="Qualipix" width="350" height="93"><img class="logo-dark" src="assets/img/logo-qualipix.png" alt="" width="350" height="93">
+      <a class="brand" href="/" aria-label="Qualipix, página inicial">
+        <img class="logo-light" src="/assets/img/logo-qualipix-branco.png" alt="Qualipix" width="350" height="93"><img class="logo-dark" src="/assets/img/logo-qualipix.png" alt="" width="350" height="93">
       </a>
       <nav class="nav" aria-label="Principal">
-        <a href="#produtos">Produtos</a>
-        <a href="#escolher">Como escolher</a>
-        <a href="#segmentos">Segmentos</a>
-        <a href="#empresa">Empresa</a>
-        <a href="#contato">Contato</a>
+        <a href="/" aria-current="page">Início</a>
+        <div class="nav-item">
+          <button class="nav-btn" type="button" aria-expanded="false" aria-controls="menu-produtos">Produtos</button>
+          <div class="nav-menu nav-menu-products" id="menu-produtos"><a class="menu-card" href="/lousa-digital/"><span class="menu-thumb" aria-hidden="true"><img src="/assets/renders/lousa.webp" alt="" width="96" height="72" loading="lazy"></span><span><strong>Lousa Digital</strong><small>Monitor com função touchscreen nativa de 32&quot; a 98&quot;</small></span></a><a class="menu-card" href="/moldura-touch"><span class="menu-thumb" aria-hidden="true"><img src="/assets/renders/moldura.webp" alt="" width="96" height="72" loading="lazy"></span><span><strong>Molduras Touch</strong><small>Transforme sua TV comum em uma TV touch de 32&quot; a 85&quot;</small></span></a><a class="menu-card" href="/lousamax80"><span class="menu-thumb" aria-hidden="true"><img src="/assets/renders/max80.webp" alt="" width="96" height="72" loading="lazy"></span><span><strong>Lousa Branca Interativa</strong><small>Lousa interativa para uso com Data Show</small></span></a><a class="menu-card" href="/quadro-branco"><span class="menu-thumb" aria-hidden="true"><img src="/assets/renders/quadro.webp" alt="" width="96" height="72" loading="lazy"></span><span><strong>Quadro Híbrido</strong><small>Quadro branco com lousa digital integrada e plataforma com IA</small></span></a><a class="menu-card" href="/totem-interativo"><span class="menu-thumb" aria-hidden="true"><img src="/assets/renders/totem.webp" alt="" width="96" height="72" loading="lazy"></span><span><strong>Totens</strong><small>Display angulado com base de piso especial de 32&quot; a 55&quot;</small></span></a><a class="menu-card" href="/flip-chart"><span class="menu-thumb" aria-hidden="true"><img src="/assets/renders/flip.webp" alt="" width="96" height="72" loading="lazy"></span><span><strong>Flip Chart Digital</strong><small>Monitor touch na vertical com suporte de piso</small></span></a><a class="menu-card" href="/acessorios/"><span class="menu-thumb menu-thumb-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20 14 10m2-6 4 4-3 3-4-4zM9 15l-2-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><strong>Acessórios</strong><small>Suportes, ponteiras e computador OPS para a sua lousa</small></span></a></div>
+        </div>
+        <div class="nav-item">
+          <button class="nav-btn" type="button" aria-expanded="false" aria-controls="menu-segmentos">Segmentos</button>
+          <div class="nav-menu nav-menu-segments" id="menu-segmentos"><a class="menu-card menu-card-text" href="/corporativo"><span><strong>Corporativo</strong><small>Lousas digitais para reuniões, treinamentos e colaboração</small></span></a><a class="menu-card menu-card-text" href="/educacao"><span><strong>Educação</strong><small>Tecnologia que transforma a forma de ensinar e aprender</small></span></a><a class="menu-card menu-card-text" href="/eventos"><span><strong>Eventos</strong><small>Experiências visuais de alto impacto para eventos memoráveis</small></span></a><a class="menu-card menu-card-text" href="/governo"><span><strong>Governo</strong><small>Tecnologia para escolas públicas</small></span></a><a class="menu-card menu-card-text" href="/saude"><span><strong>Saúde</strong><small>Apresente exames e diagnósticos com mais interatividade</small></span></a><a class="menu-card menu-card-text" href="/arquitetos"><span><strong>Arquitetos e Engenheiros</strong><small>Tecnologia touch para elevar a experiência dos seus projetos</small></span></a></div>
+        </div>
+        <a href="/m/empresa/">Empresa</a>
+        <a href="/fale-conosco/">Contato</a>
       </nav>
       <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/5511971756835?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com especialista</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span class="sr-only">Abrir menu</span></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span class="sr-only">Abrir menu</span></button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Menu">
-      <a href="#produtos">Produtos</a>
-      <a href="#escolher">Como escolher</a>
-      <a href="#segmentos">Segmentos</a>
-      <a href="#empresa">Empresa</a>
-      <a href="#contato">Contato</a>
-      <a class="btn btn-primary" href="https://wa.me/5511971756835" target="_blank" rel="noopener">Falar com especialista</a>
+      <a href="/">Início</a>
+      <details><summary>Produtos</summary><div><a href="/lousa-digital/">Lousa Digital</a><a href="/moldura-touch">Molduras Touch</a><a href="/lousamax80">Lousa Branca Interativa</a><a href="/quadro-branco">Quadro Híbrido</a><a href="/totem-interativo">Totens</a><a href="/flip-chart">Flip Chart Digital</a><a href="/acessorios/">Acessórios</a></div></details>
+      <details><summary>Segmentos</summary><div><a href="/corporativo">Corporativo</a><a href="/educacao">Educação</a><a href="/eventos">Eventos</a><a href="/governo">Governo</a><a href="/saude">Saúde</a><a href="/arquitetos">Arquitetos e Engenheiros</a></div></details>
+      <a href="/m/empresa/">Empresa</a>
+      <a href="/fale-conosco/">Contato</a>
+      <a class="btn btn-primary" href="https://wa.me/5511971756835?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank" rel="noopener">Falar com especialista</a>
     </nav>
   </header>
+  <!-- /layout:header -->
 
   <main id="conteudo">
     <!-- HERO -------------------------------------------------------------->
@@ -508,26 +517,43 @@
     </section>
   </main>
 
+  <!-- layout:footer (gerado por tools/pages/build.mjs) -->
   <footer class="site-footer" data-theme="dark">
-    <div class="wrap footer-grid">
-      <a class="brand brand-footer" href="#inicio" aria-label="Qualipix">
-        <img class="logo-light" src="assets/img/logo-qualipix-branco.png" alt="Qualipix" width="350" height="93"><img class="logo-dark" src="assets/img/logo-qualipix.png" alt="" width="350" height="93">
-      </a>
-      <nav class="footer-nav" aria-label="Rodapé">
-        <a href="#produtos">Produtos</a>
-        <a href="#tamanhos">Tamanhos</a>
-        <a href="#escolher">Como escolher</a>
-        <a href="#duvidas">Dúvidas</a>
-        <a href="https://www.instagram.com/qualipix/" target="_blank" rel="noopener">Instagram</a>
-        <a href="privacidade.html">Política de privacidade</a>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-about">
+          <a class="brand brand-footer" href="/" aria-label="Qualipix, página inicial">
+            <img class="logo-light" src="/assets/img/logo-qualipix-branco.png" alt="Qualipix" width="350" height="93"><img class="logo-dark" src="/assets/img/logo-qualipix.png" alt="" width="350" height="93">
+          </a>
+          <p>Fabricante brasileira de lousas digitais, molduras touch, quadros híbridos, totens e flip charts digitais desde 2012.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/qualipix/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/Qualipix-494746560550329/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2.5V4.5H14c-2.2 0-3.8 1.7-3.8 3.9V11H8v3.4h2.2V21h3.5v-6.6h2.5l.5-3.4h-3V8.6c0-.4.2-.6.3-.6z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com/channel/UCKTfaSCrtlIroarM-C3dU4g" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col"><h2>Produtos</h2><ul role="list"><li><a href="/lousa-digital/">Lousa Digital</a></li><li><a href="/moldura-touch">Molduras Touch</a></li><li><a href="/lousamax80">Lousa Branca Interativa</a></li><li><a href="/quadro-branco">Quadro Híbrido</a></li><li><a href="/totem-interativo">Totens</a></li><li><a href="/flip-chart">Flip Chart Digital</a></li><li><a href="/acessorios/">Acessórios</a></li></ul></div>
+          <div class="footer-col"><h2>Segmentos</h2><ul role="list"><li><a href="/corporativo">Corporativo</a></li><li><a href="/educacao">Educação</a></li><li><a href="/eventos">Eventos</a></li><li><a href="/governo">Governo</a></li><li><a href="/saude">Saúde</a></li><li><a href="/arquitetos">Arquitetos e Engenheiros</a></li></ul></div>
+          <div class="footer-col"><h2>Institucional</h2><ul role="list"><li><a href="/blog/">Nosso blog</a></li><li><a href="/catalogos/">Catálogos</a></li><li><a href="/m/empresa/">Empresa</a></li><li><a href="/class/">QualipixClass</a></li><li><a href="https://heyzine.com/flip-book/df2b60bda2.html" target="_blank" rel="noopener">Catálogo de Produtos</a></li><li><a href="/m/instrucoes-dx-series/">Instruções DX Series</a></li><li><a href="/m/instrucoes-sx-series/">Instruções SX Series</a></li><li><a href="/m/qual-solucao-escolher/">Qual solução escolher</a></li><li><a href="/m/politica-de-privacidade/">Política de privacidade</a></li><li><a href="/m/tutoriais/">Tutoriais</a></li><li><a href="/m/download/">Download</a></li></ul></div>
+          <div class="footer-col"><h2>Precisa de ajuda?</h2><ul role="list"><li><a href="/central/pedidos/">Meus pedidos</a></li><li><a href="/central/dados/">Meus dados</a></li><li><a href="/faq/">Dúvidas frequentes</a></li><li><a href="/m/trocas-e-devolucoes/">Trocas e devoluções</a></li><li><a href="/fale-conosco/">Fale conosco</a></li></ul></div>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div><h2>Unidade São Paulo</h2><p>Alameda Santos, 1773, conj. 1003, Cerqueira César, São Paulo/SP, CEP 01419-100</p><p><a href="tel:+551126904299">(11) 2690-4299</a> telefone · <a href="https://wa.me/5511971756835" target="_blank" rel="noopener">(11) 97175-6835</a> WhatsApp</p></div>
+        <div><h2>Unidade Belo Horizonte</h2><p>Rua das Canoas, 970, Betânia, Belo Horizonte/MG, CEP 30570-068</p><p><a href="tel:+553135686835">(31) 3568-6835</a> telefone</p></div>
+        <div><h2>Suporte técnico</h2><p><a href="https://wa.me/5531991577018" target="_blank" rel="noopener">(31) 99157-7018</a> WhatsApp</p><p><a href="mailto:contato@qualipix.com.br">contato@qualipix.com.br</a></p></div>
+      </div>
+      <div class="footer-legal">
+        <p>© 2026 Qualipix Tecnologia em Equipamentos Audiovisuais Ltda. CNPJ 16.915.236/0001-98. Todos os direitos reservados.</p>
         <button type="button" class="footer-link-btn" data-cookie-prefs>Preferências de cookies</button>
-      </nav>
-      <p class="legal">© 2026 Qualipix Tecnologia em Equipamentos Audiovisuais Ltda. CNPJ 16.915.236/0001-98.</p>
+      </div>
     </div>
   </footer>
 
   <a class="wa-float" href="https://wa.me/5511971756835?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Qualipix." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
     <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5.1 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.5z"/></svg>
   </a>
+  <!-- /layout:footer -->
 </body>
 </html>

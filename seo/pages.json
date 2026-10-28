@@ -1,0 +1,326 @@
+[
+ {
+  "path": "/lousa-digital/",
+  "kind": "produto"
+ },
+ {
+  "path": "/moldura-touch/",
+  "kind": "produto"
+ },
+ {
+  "path": "/lousamax80/",
+  "kind": "produto"
+ },
+ {
+  "path": "/quadro-branco/",
+  "kind": "produto"
+ },
+ {
+  "path": "/totem-interativo/",
+  "kind": "produto"
+ },
+ {
+  "path": "/flip-chart/",
+  "kind": "produto"
+ },
+ {
+  "path": "/corporativo/",
+  "kind": "segmento"
+ },
+ {
+  "path": "/educacao/",
+  "kind": "segmento"
+ },
+ {
+  "path": "/eventos/",
+  "kind": "segmento"
+ },
+ {
+  "path": "/governo/",
+  "kind": "segmento"
+ },
+ {
+  "path": "/saude/",
+  "kind": "segmento"
+ },
+ {
+  "path": "/arquitetos/",
+  "kind": "segmento"
+ },
+ {
+  "path": "/segmentos/",
+  "kind": "lista"
+ },
+ {
+  "path": "/monitor-touch-qualipix-linha-sx/",
+  "kind": "loja"
+ },
+ {
+  "path": "/lousa-digital-qualipix-linha-dx/",
+  "kind": "loja"
+ },
+ {
+  "path": "/moldura-touch-qualipix/",
+  "kind": "loja"
+ },
+ {
+  "path": "/lousa-branca-interativa-qualipix/",
+  "kind": "loja"
+ },
+ {
+  "path": "/totens-qualipix/",
+  "kind": "loja"
+ },
+ {
+  "path": "/flip-chart-digital-qualipix-43-e-55/",
+  "kind": "loja"
+ },
+ {
+  "path": "/quadro-branco-integrado-com-lousa-digital-e-plataforma-de-ia/",
+  "kind": "loja"
+ },
+ {
+  "path": "/ponteira-loua-digital-qualipix-linha-dx-e-linha-sx/",
+  "kind": "loja"
+ },
+ {
+  "path": "/suporte-de-piso-max120-com-ajuste-eletrico-de-altura-para-lousa-digital-qualipix/",
+  "kind": "loja"
+ },
+ {
+  "path": "/suporte-de-piso-para-display-e-tv-ate-86-polegadas/",
+  "kind": "loja"
+ },
+ {
+  "path": "/ops-windows-pc-qualipix-fixacao-inteligente/",
+  "kind": "loja"
+ },
+ {
+  "path": "/tela-touch-moldura-qualipix-86-pol/",
+  "kind": "loja"
+ },
+ {
+  "path": "/moldura-interativa-tela-touch-58-pol-qualipix-pro58/",
+  "kind": "loja"
+ },
+ {
+  "path": "/caneta-magnetica-ponta-fina/",
+  "kind": "loja"
+ },
+ {
+  "path": "/ponteira-para-escrita-em-tela-touch-qualipix/",
+  "kind": "loja"
+ },
+ {
+  "path": "/instalacao-de-moldura-interativa-em-sao-paulo-sp/",
+  "kind": "loja"
+ },
+ {
+  "path": "/instalacao-de-moldura-interativa-em-belo-horizonte-mg/",
+  "kind": "loja"
+ },
+ {
+  "path": "/instalacao-de-moldura-interativa-na-cidade-do-rio-de-janeiro/",
+  "kind": "loja"
+ },
+ {
+  "path": "/produtos/",
+  "kind": "lista"
+ },
+ {
+  "path": "/produtos/lousa-digital/",
+  "kind": "lista"
+ },
+ {
+  "path": "/produtos/molduras-touch/",
+  "kind": "lista"
+ },
+ {
+  "path": "/produtos/lousa-branca-interativa/",
+  "kind": "lista"
+ },
+ {
+  "path": "/produtos/quadro-hibrido/",
+  "kind": "lista"
+ },
+ {
+  "path": "/produtos/totens/",
+  "kind": "lista"
+ },
+ {
+  "path": "/produtos/flip-chart-digital/",
+  "kind": "lista"
+ },
+ {
+  "path": "/acessorios/",
+  "kind": "lista"
+ },
+ {
+  "path": "/servicos/",
+  "kind": "lista"
+ },
+ {
+  "path": "/m/empresa/",
+  "kind": "doc"
+ },
+ {
+  "path": "/fale-conosco/",
+  "kind": "doc"
+ },
+ {
+  "path": "/faq/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/trocas-e-devolucoes/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/satisfacao-garantida/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/frete/",
+  "kind": "doc"
+ },
+ {
+  "path": "/catalogos/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/catalogo-de-produtos/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/portfolio/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/projetos-recentes/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/qual-solucao-escolher/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/instrucoes-sx-series/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/instrucoes-dx-series/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/tutoriais/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/download/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/instalacao-moldura-touch/",
+  "kind": "doc"
+ },
+ {
+  "path": "/instalacao-moldura-touch/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/lousas/",
+  "kind": "doc"
+ },
+ {
+  "path": "/m/politica-de-privacidade/",
+  "kind": "doc"
+ },
+ {
+  "path": "/termos/",
+  "kind": "doc"
+ },
+ {
+  "path": "/avaliacoes/",
+  "kind": "doc"
+ },
+ {
+  "path": "/class/",
+  "kind": "produto"
+ },
+ {
+  "path": "/video-wall/",
+  "kind": "produto"
+ },
+ {
+  "path": "/blog/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/lousa-digital-em-2027-o-que-escolas-e-empresas-precisam-avaliar-antes-de-comprar/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/lousa-digital-funciona-mesmo-pesquisas-mostram-o-impacto-da-tecnologia-na-aprendizagem/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/lousa-digital-de-65-75-ou-86-polegadas-qual-tamanho-escolher-para-cada-sala/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/por-que-uma-sala-moderna-ainda-precisa-de-um-quadro-branco/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/como-a-lousa-digital-pode-enriquecer-uma-aula-ou-apresentacao/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/muito-alem-do-giz-e-do-touch-como-a-inteligencia-artificial-foi-parar-na-lousa-digital/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/como-preparar-uma-aula-em-uma-lousa-digital/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/digital-signage-versatilidade-e-eficiencia-na-comunicacao/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/tecnologia-touch-screen-inovacao-nos-pontos-de-venda/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/interatividade-tecnologica-e-sua-influencia-na-escolha-do-consumidor/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/7-tendencias-tecnologicas-em-sala-de-aula/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/7-dicas-para-produzir-conteudo-para-video-wall/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/8-dicas-para-ensinar-usando-a-lousas-digital/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/monitores-touch-screen-qualipix-tecnologia-e-inovacao-na-educacao/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/6-mitos-sobre-o-uso-da-tecnologia-na-educacao/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/reunioes-mais-inteligentes-e-eficazes-com-a-tv-touch-screen/",
+  "kind": "doc"
+ },
+ {
+  "path": "/blog/a-revolucao-4-0-e-a-educacao/",
+  "kind": "doc"
+ }
+]

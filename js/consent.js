@@ -51,7 +51,7 @@ banner.setAttribute('aria-label', 'Aviso de cookies');
 banner.hidden = true;
 banner.innerHTML = `
   <div class="cookie-inner">
-    <p class="cookie-text">Usamos cookies para medir visitas e melhorar nossas campanhas. O site funciona do mesmo jeito se você recusar. <a href="privacidade.html">Política de privacidade</a></p>
+    <p class="cookie-text">Usamos cookies para medir visitas e melhorar nossas campanhas. O site funciona do mesmo jeito se você recusar. <a href="/m/politica-de-privacidade/">Política de privacidade</a></p>
     <form class="cookie-prefs" hidden>
       <label><input type="checkbox" name="analytics"> Medição de visitas <span>Google Analytics e Microsoft Clarity</span></label>
       <label><input type="checkbox" name="ads"> Anúncios <span>Google Ads, Meta e LinkedIn</span></label>
@@ -118,7 +118,7 @@ document.addEventListener('click', (e) => {
   if (event) window.dataLayer.push({ event, link_location: sectionOf(a), link_text: a.textContent.trim().slice(0, 80), product: a.dataset.product || undefined });
 }, true);
 
-// o formulário de contato avisa quando um lead é enviado (js/main.js)
+// formulários e compra pelo WhatsApp avisam quando um lead é enviado (js/main.js, js/page.js)
 window.addEventListener('qpx:lead', (e) => {
-  window.dataLayer.push({ event: 'generate_lead', lead_source: e.detail?.source || 'form', lead_area: e.detail?.area });
+  window.dataLayer.push({ event: e.detail?.source === 'compra' ? 'begin_checkout' : 'generate_lead', lead_source: e.detail?.source || 'form', lead_area: e.detail?.area, product: e.detail?.product, page_path: location.pathname });
 });

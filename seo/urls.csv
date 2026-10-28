@@ -1,69 +1,105 @@
 url_atual,grupo,assunto,pagina_principal,indexar,situacao_hoje,acao_agora_na_wbuy,destino_caminho_3,cliques_90_dias,observacao
 /,Home,,,sim,"200, index",,(nova home),,Novo site
-/m/catalogo-de-produtos/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/catalogo-de-produtos/,,
-/m/qualipixclass/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/qualipixclass/,,
-/m/trocas-e-devolucoes/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/trocas-e-devolucoes/,,
-/m/compra-whatsapp/,Fluxo de compra,,,verificar,"200, index","Verificar se é etapa da compra; se for, mesmo tratamento das páginas de obrigado",https://loja.qualipix.com.br/m/compra-whatsapp/,,Usada pelo checkout e por conversoes: nunca remover
-/m/empresa/,Institucionais,Empresa,/m/empresa/,sim,"200, index",,https://loja.qualipix.com.br/m/empresa/,,
-/m/instrucoes-dx-series/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/instrucoes-dx-series/,,
-/m/instrucoes-sx-series/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/instrucoes-sx-series/,,
+/m/catalogo-de-produtos/,Institucionais,,,sim,,,/m/catalogo-de-produtos/,,
+/m/qualipixclass/,Institucionais,,,sim,,,/m/qualipixclass/,,
+/m/trocas-e-devolucoes/,Institucionais,,,sim,,,/m/trocas-e-devolucoes/,,
+/m/compra-whatsapp/,Fluxo de compra,,,verificar,"200, index","Verificar se é etapa da compra; se for, mesmo tratamento das páginas de obrigado",/m/compra-whatsapp/,,Usada pelo checkout e por conversoes: nunca remover
+/m/empresa/,Institucionais,Empresa,/m/empresa/,sim,"200, index",,/m/empresa/,,
+/m/instrucoes-dx-series/,Institucionais,,,sim,,,/m/instrucoes-dx-series/,,
+/m/instrucoes-sx-series/,Institucionais,,,sim,,,/m/instrucoes-sx-series/,,
 /m/pagamento-confirmado/,Fluxo de compra,,,não,"200, index","Página de obrigado: marcar noindex, tirar do sitemap e conferir no GTM quais tags disparam nela",https://loja.qualipix.com.br/m/pagamento-confirmado/,,Usada pelo checkout e por conversoes: nunca remover
-/m/qual-solucao-escolher/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/qual-solucao-escolher/,,
-/m/frete/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/frete/,,
+/m/qual-solucao-escolher/,Institucionais,,,sim,,,/m/qual-solucao-escolher/,,
+/m/frete/,Institucionais,,,sim,,,/m/frete/,,
 /m/pedido-efetuado-com-sucesso/,Fluxo de compra,,,não,"200, index","Página de obrigado: marcar noindex, tirar do sitemap e conferir no GTM quais tags disparam nela",https://loja.qualipix.com.br/m/pedido-efetuado-com-sucesso/,,Usada pelo checkout e por conversoes: nunca remover
-/m/politica-de-privacidade/,Institucionais,Privacidade,/m/politica-de-privacidade/,sim,"200, index",,/privacidade.html,,Politica do novo site (revisao juridica pendente)
-/m/projetos-recentes/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/projetos-recentes/,,
-/m/lousas/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/lousas/,,
-/m/satisfacao-garantida/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/satisfacao-garantida/,,
-/m/portfolio/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/portfolio/,,
-/m/instalacao-moldura-touch/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/instalacao-moldura-touch/,,
-/m/tutoriais/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/tutoriais/,,
-/m/download/,Institucionais,,,sim,,,https://loja.qualipix.com.br/m/download/,,
-/produtos/,Categorias,,,sim,,,https://loja.qualipix.com.br/produtos/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/produtos/acessorios/,Categorias,Acessórios (categoria),/produtos/acessorios/,sim,"200, index",,https://loja.qualipix.com.br/produtos/acessorios/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/produtos/flip-chart-digital/,Categorias,,,sim,,,https://loja.qualipix.com.br/produtos/flip-chart-digital/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/produtos/lousa-branca-interativa/,Categorias,Lousa branca (categoria),/produtos/lousa-branca-interativa/,sim,"200, index",,https://loja.qualipix.com.br/produtos/lousa-branca-interativa/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/produtos/lousa-digital/,Categorias,,,sim,,,https://loja.qualipix.com.br/produtos/lousa-digital/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/produtos/molduras-touch/,Categorias,Molduras (categoria),/produtos/molduras-touch/,sim,"200, index",,https://loja.qualipix.com.br/produtos/molduras-touch/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/produtos/quadro-hibrido/,Categorias,,,sim,,,https://loja.qualipix.com.br/produtos/quadro-hibrido/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/produtos/totens/,Categorias,Totens (categoria),/produtos/totens/,sim,"200, index",,https://loja.qualipix.com.br/produtos/totens/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/acessorios/,Produtos e acessorios na raiz,Acessórios (categoria),/produtos/acessorios/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/acessorios/ (proposta, confirmar no Search Console)",https://loja.qualipix.com.br/produtos/acessorios/,,
-/segmentos/,Segmentos,,,sim,,,https://loja.qualipix.com.br/segmentos/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/segmentos/arquitetos-e-engenheiros/,Segmentos,,,sim,,,https://loja.qualipix.com.br/segmentos/arquitetos-e-engenheiros/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/segmentos/corporativo/,Segmentos,,,sim,,,https://loja.qualipix.com.br/segmentos/corporativo/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/segmentos/educacao/,Segmentos,,,sim,,,https://loja.qualipix.com.br/segmentos/educacao/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/segmentos/eventos/,Segmentos,,,sim,,,https://loja.qualipix.com.br/segmentos/eventos/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/segmentos/governo/,Segmentos,,,sim,,,https://loja.qualipix.com.br/segmentos/governo/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/segmentos/saude/,Segmentos,,,sim,,,https://loja.qualipix.com.br/segmentos/saude/,,Candidata a pagina propria no novo site se tiver trafego relevante
-/totems/,Produtos e acessorios na raiz,Totens (categoria),/produtos/totens/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/totens/ (proposta, confirmar no Search Console)",https://loja.qualipix.com.br/produtos/totens/,,
-/lousa-branca-interativa/,Produtos e acessorios na raiz,Lousa branca (categoria),/produtos/lousa-branca-interativa/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/lousa-branca-interativa/ (proposta, confirmar no Search Console)",https://loja.qualipix.com.br/produtos/lousa-branca-interativa/,,
-/molduras-touch/,Produtos e acessorios na raiz,Molduras (categoria),/produtos/molduras-touch/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/molduras-touch/ (proposta, confirmar no Search Console)",https://loja.qualipix.com.br/produtos/molduras-touch/,,
-/monitores-linha-dx/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/monitores-linha-dx/,,
-/molduras/,Produtos e acessorios na raiz,Molduras (categoria),/produtos/molduras-touch/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/molduras-touch/ (proposta, confirmar no Search Console)",https://loja.qualipix.com.br/produtos/molduras-touch/,,
-/servicos/,Institucionais,,,sim,,,https://loja.qualipix.com.br/servicos/,,
-/ponteira-loua-digital-qualipix-linha-dx-e-linha-sx/,Produtos e acessorios na raiz,,,sim,,"Erro de digitação na URL (""loua""); corrigir com 301, prioridade baixa",https://loja.qualipix.com.br/ponteira-loua-digital-qualipix-linha-dx-e-linha-sx/,,
-/suporte-de-piso-max120-com-ajuste-eletrico-de-altura-para-lousa-digital-qualipix/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/suporte-de-piso-max120-com-ajuste-eletrico-de-altura-para-lousa-digital-qualipix/,,
-/flip-chart-digital-qualipix-43-e-55/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/flip-chart-digital-qualipix-43-e-55/,,
-/suporte-de-piso-para-display-e-tv-ate-86-polegadas/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/suporte-de-piso-para-display-e-tv-ate-86-polegadas/,,
-/instalacao-de-moldura-interativa-na-cidade-do-rio-de-janeiro/,SEO local,,,sim,,,https://loja.qualipix.com.br/instalacao-de-moldura-interativa-na-cidade-do-rio-de-janeiro/,,Alta prioridade: busca local; manter conteudo intacto
-/instalacao-de-moldura-interativa-em-belo-horizonte-mg/,SEO local,,,sim,,,https://loja.qualipix.com.br/instalacao-de-moldura-interativa-em-belo-horizonte-mg/,,Alta prioridade: busca local; manter conteudo intacto
-/instalacao-de-moldura-interativa-em-sao-paulo-sp/,SEO local,,,sim,,,https://loja.qualipix.com.br/instalacao-de-moldura-interativa-em-sao-paulo-sp/,,Alta prioridade: busca local; manter conteudo intacto
-/totens-qualipix/,Produtos e acessorios na raiz,,,sim,"200, index",,https://loja.qualipix.com.br/totens-qualipix/,,
-/lousa-branca-interativa-qualipix/,Produtos e acessorios na raiz,,,sim,"200, index",,https://loja.qualipix.com.br/lousa-branca-interativa-qualipix/,,
-/moldura-touch-qualipix/,Produtos e acessorios na raiz,,,sim,"200, index",,https://loja.qualipix.com.br/moldura-touch-qualipix/,,
-/lousa-digital-qualipix-linha-dx/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/lousa-digital-qualipix-linha-dx/,,
-/monitor-touch-qualipix-linha-sx/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/monitor-touch-qualipix-linha-sx/,,
-/tela-touch-moldura-qualipix-86-pol/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/tela-touch-moldura-qualipix-86-pol/,,
-/ops-windows-pc-qualipix-fixacao-inteligente/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/ops-windows-pc-qualipix-fixacao-inteligente/,,
-/ponteira-para-escrita-em-tela-touch-qualipix/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/ponteira-para-escrita-em-tela-touch-qualipix/,,
-/moldura-interativa-tela-touch-58-pol-qualipix-pro58/,Produtos e acessorios na raiz,,,sim,,,https://loja.qualipix.com.br/moldura-interativa-tela-touch-58-pol-qualipix-pro58/,,
-/avaliacoes/,Institucionais,,,sim,,,https://loja.qualipix.com.br/avaliacoes/,,
-/termos/,Institucionais,,,sim,,,https://loja.qualipix.com.br/termos/,,
-/politica-privacidade/,Institucionais,Privacidade,/m/politica-de-privacidade/,sim,"200, index","Duplicada: canonical ou 301 para /m/politica-de-privacidade/ (proposta, confirmar no Search Console)",/privacidade.html,,Politica do novo site (revisao juridica pendente)
-/faq/,Institucionais,,,sim,,,https://loja.qualipix.com.br/faq/,,
-/sobre/,Institucionais,Empresa,/m/empresa/,sim,"200, index","Duplicada: canonical ou 301 para /m/empresa/ (proposta, confirmar no Search Console)",https://loja.qualipix.com.br/m/empresa/,,
-/video-wall/,Fora do sitemap,,,sim,"200, index",Página ativa fora do sitemap: incluir no sitemap,https://loja.qualipix.com.br/video-wall/,,Produto que ainda não está no novo site
-/display-interativo/,Fora do sitemap,,,não,404,Já perde tráfego: 301 para /produtos/lousa-digital/ (proposta),https://loja.qualipix.com.br/produtos/lousa-digital/,,
-/m/a-empresa/,Fora do sitemap,,,não,cai em /not-found/,Já perde tráfego: 301 para /m/empresa/,https://loja.qualipix.com.br/m/empresa/,,
-/m/multimidia/,Fora do sitemap,,,não,cai em /not-found/,Já perde tráfego: 301 para a página equivalente (conteúdo antigo desconhecido; ver no Search Console),https://loja.qualipix.com.br/produtos/,,
-/sala-de-aula-qualipix-n-1/,Fora do sitemap,,,não,redireciona para a home,Redireciona para a home (o Google trata como erro): 301 para /segmentos/educacao/ (proposta),https://loja.qualipix.com.br/segmentos/educacao/,,
+/m/politica-de-privacidade/,Institucionais,Privacidade,/m/politica-de-privacidade/,sim,"200, index",,/m/politica-de-privacidade/,,Politica do novo site (revisao juridica pendente)
+/m/projetos-recentes/,Institucionais,,,sim,,,/m/projetos-recentes/,,
+/m/lousas/,Institucionais,,,sim,,,/m/lousas/,,
+/m/satisfacao-garantida/,Institucionais,,,sim,,,/m/satisfacao-garantida/,,
+/m/portfolio/,Institucionais,,,sim,,,/m/portfolio/,,
+/m/instalacao-moldura-touch/,Institucionais,,,sim,,,/m/instalacao-moldura-touch/,,
+/m/tutoriais/,Institucionais,,,sim,,,/m/tutoriais/,,
+/m/download/,Institucionais,,,sim,,,/m/download/,,
+/produtos/,Categorias,,,sim,,,/produtos/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/produtos/acessorios/,Categorias,Acessórios (categoria),/acessorios/,sim,"200, index",Duplicada: canonical ou 301 para /acessorios/ (link do menu),/acessorios/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/produtos/flip-chart-digital/,Categorias,,,sim,,,/produtos/flip-chart-digital/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/produtos/lousa-branca-interativa/,Categorias,Lousa branca (categoria),/produtos/lousa-branca-interativa/,sim,"200, index",,/produtos/lousa-branca-interativa/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/produtos/lousa-digital/,Categorias,,,sim,,,/produtos/lousa-digital/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/produtos/molduras-touch/,Categorias,Molduras (categoria),/produtos/molduras-touch/,sim,"200, index",,/produtos/molduras-touch/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/produtos/quadro-hibrido/,Categorias,,,sim,,,/produtos/quadro-hibrido/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/produtos/totens/,Categorias,Totens (categoria),/produtos/totens/,sim,"200, index",,/produtos/totens/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/acessorios/,Produtos e acessorios na raiz,Acessórios (categoria),/acessorios/,sim,"200, index",Página principal dos acessórios (link do menu); manter self-canonical,/acessorios/,,
+/segmentos/,Segmentos,,,sim,,,/segmentos/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/segmentos/arquitetos-e-engenheiros/,Segmentos,,,sim,,,/segmentos/arquitetos-e-engenheiros/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/segmentos/corporativo/,Segmentos,,,sim,,,/segmentos/corporativo/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/segmentos/educacao/,Segmentos,,,sim,,,/segmentos/educacao/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/segmentos/eventos/,Segmentos,,,sim,,,/segmentos/eventos/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/segmentos/governo/,Segmentos,,,sim,,,/segmentos/governo/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/segmentos/saude/,Segmentos,,,sim,,,/segmentos/saude/,,Candidata a pagina propria no novo site se tiver trafego relevante
+/totems/,Produtos e acessorios na raiz,Totens (categoria),/produtos/totens/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/totens/ (proposta, confirmar no Search Console)",/produtos/totens/,,
+/lousa-branca-interativa/,Produtos e acessorios na raiz,Lousa branca (categoria),/produtos/lousa-branca-interativa/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/lousa-branca-interativa/ (proposta, confirmar no Search Console)",/produtos/lousa-branca-interativa/,,
+/molduras-touch/,Produtos e acessorios na raiz,Molduras (categoria),/produtos/molduras-touch/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/molduras-touch/ (proposta, confirmar no Search Console)",/produtos/molduras-touch/,,
+/monitores-linha-dx/,Produtos e acessorios na raiz,,,sim,,,/monitores-linha-dx/,,
+/molduras/,Produtos e acessorios na raiz,Molduras (categoria),/produtos/molduras-touch/,sim,"200, index","Duplicada: canonical ou 301 para /produtos/molduras-touch/ (proposta, confirmar no Search Console)",/produtos/molduras-touch/,,
+/servicos/,Institucionais,,,sim,,,/servicos/,,
+/ponteira-loua-digital-qualipix-linha-dx-e-linha-sx/,Produtos e acessorios na raiz,,,sim,,"Erro de digitação na URL (""loua""); corrigir com 301, prioridade baixa",/ponteira-loua-digital-qualipix-linha-dx-e-linha-sx/,,
+/suporte-de-piso-max120-com-ajuste-eletrico-de-altura-para-lousa-digital-qualipix/,Produtos e acessorios na raiz,,,sim,,,/suporte-de-piso-max120-com-ajuste-eletrico-de-altura-para-lousa-digital-qualipix/,,
+/flip-chart-digital-qualipix-43-e-55/,Produtos e acessorios na raiz,,,sim,,,/flip-chart-digital-qualipix-43-e-55/,,
+/suporte-de-piso-para-display-e-tv-ate-86-polegadas/,Produtos e acessorios na raiz,,,sim,,,/suporte-de-piso-para-display-e-tv-ate-86-polegadas/,,
+/instalacao-de-moldura-interativa-na-cidade-do-rio-de-janeiro/,SEO local,,,sim,,,/instalacao-de-moldura-interativa-na-cidade-do-rio-de-janeiro/,,Alta prioridade: busca local; manter conteudo intacto
+/instalacao-de-moldura-interativa-em-belo-horizonte-mg/,SEO local,,,sim,,,/instalacao-de-moldura-interativa-em-belo-horizonte-mg/,,Alta prioridade: busca local; manter conteudo intacto
+/instalacao-de-moldura-interativa-em-sao-paulo-sp/,SEO local,,,sim,,,/instalacao-de-moldura-interativa-em-sao-paulo-sp/,,Alta prioridade: busca local; manter conteudo intacto
+/totens-qualipix/,Produtos e acessorios na raiz,,,sim,"200, index",,/totens-qualipix/,,
+/lousa-branca-interativa-qualipix/,Produtos e acessorios na raiz,,,sim,"200, index",,/lousa-branca-interativa-qualipix/,,
+/moldura-touch-qualipix/,Produtos e acessorios na raiz,,,sim,"200, index",,/moldura-touch-qualipix/,,
+/lousa-digital-qualipix-linha-dx/,Produtos e acessorios na raiz,,,sim,,,/lousa-digital-qualipix-linha-dx/,,
+/monitor-touch-qualipix-linha-sx/,Produtos e acessorios na raiz,,,sim,,,/monitor-touch-qualipix-linha-sx/,,
+/tela-touch-moldura-qualipix-86-pol/,Produtos e acessorios na raiz,,,sim,,,/tela-touch-moldura-qualipix-86-pol/,,
+/ops-windows-pc-qualipix-fixacao-inteligente/,Produtos e acessorios na raiz,,,sim,,,/ops-windows-pc-qualipix-fixacao-inteligente/,,
+/ponteira-para-escrita-em-tela-touch-qualipix/,Produtos e acessorios na raiz,,,sim,,,/ponteira-para-escrita-em-tela-touch-qualipix/,,
+/moldura-interativa-tela-touch-58-pol-qualipix-pro58/,Produtos e acessorios na raiz,,,sim,,,/moldura-interativa-tela-touch-58-pol-qualipix-pro58/,,
+/avaliacoes/,Institucionais,,,sim,,,/avaliacoes/,,
+/termos/,Institucionais,,,sim,,,/termos/,,
+/politica-privacidade/,Institucionais,Privacidade,/m/politica-de-privacidade/,sim,"200, index","Duplicada: canonical ou 301 para /m/politica-de-privacidade/ (proposta, confirmar no Search Console)",/m/politica-de-privacidade/,,Politica do novo site (revisao juridica pendente)
+/faq/,Institucionais,,,sim,,,/faq/,,
+/sobre/,Institucionais,Empresa,/m/empresa/,sim,"200, index","Duplicada: canonical ou 301 para /m/empresa/ (proposta, confirmar no Search Console)",/m/empresa/,,
+/video-wall/,Fora do sitemap,,,sim,"200, index",Página ativa fora do sitemap: incluir no sitemap,/video-wall/,,Produto que ainda não está no novo site
+/display-interativo/,Fora do sitemap,,,não,404,Já perde tráfego: 301 para /produtos/lousa-digital/ (proposta),/lousa-digital/,,
+/m/a-empresa/,Fora do sitemap,,,não,cai em /not-found/,Já perde tráfego: 301 para /m/empresa/,/m/empresa/,,
+/m/multimidia/,Fora do sitemap,,,não,cai em /not-found/,Já perde tráfego: 301 para a página equivalente (conteúdo antigo desconhecido; ver no Search Console),/produtos/,,
+/sala-de-aula-qualipix-n-1/,Fora do sitemap,,,não,redireciona para a home,Redireciona para a home (o Google trata como erro): 301 para /segmentos/educacao/ (proposta),/educacao/,,
+/lousa-digital/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/lousa-digital/,,Página recriada no novo site com o mesmo caminho
+/moldura-touch/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/moldura-touch/,,Página recriada no novo site com o mesmo caminho
+/lousamax80/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/lousamax80/,,Página recriada no novo site com o mesmo caminho
+/quadro-branco/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/quadro-branco/,,Página recriada no novo site com o mesmo caminho
+/totem-interativo/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/totem-interativo/,,Página recriada no novo site com o mesmo caminho
+/flip-chart/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/flip-chart/,,Página recriada no novo site com o mesmo caminho
+/corporativo/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/corporativo/,,Página recriada no novo site com o mesmo caminho
+/educacao/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/educacao/,,Página recriada no novo site com o mesmo caminho
+/eventos/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/eventos/,,Página recriada no novo site com o mesmo caminho
+/governo/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/governo/,,Página recriada no novo site com o mesmo caminho
+/saude/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/saude/,,Página recriada no novo site com o mesmo caminho
+/arquitetos/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/arquitetos/,,Página recriada no novo site com o mesmo caminho
+/quadro-branco-integrado-com-lousa-digital-e-plataforma-de-ia/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/quadro-branco-integrado-com-lousa-digital-e-plataforma-de-ia/,,Página recriada no novo site com o mesmo caminho
+/caneta-magnetica-ponta-fina/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/caneta-magnetica-ponta-fina/,,Página recriada no novo site com o mesmo caminho
+/fale-conosco/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/fale-conosco/,,Página recriada no novo site com o mesmo caminho
+/catalogos/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/catalogos/,,Página recriada no novo site com o mesmo caminho
+/instalacao-moldura-touch/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/instalacao-moldura-touch/,,Página recriada no novo site com o mesmo caminho
+/class/,Fora do sitemap,,,sim,200 (lida em 28/10/2026),Incluir no sitemap da Wbuy,/class/,,Página recriada no novo site com o mesmo caminho
+/blog/,Blog,,,sim,post ativo no painel,,/blog/,,Página recriada no novo site com o mesmo caminho
+/blog/lousa-digital-em-2027-o-que-escolas-e-empresas-precisam-avaliar-antes-de-comprar/,Blog,,,sim,post ativo no painel,,/blog/lousa-digital-em-2027-o-que-escolas-e-empresas-precisam-avaliar-antes-de-comprar/,,Página recriada no novo site com o mesmo caminho
+/blog/lousa-digital-funciona-mesmo-pesquisas-mostram-o-impacto-da-tecnologia-na-aprendizagem/,Blog,,,sim,post ativo no painel,,/blog/lousa-digital-funciona-mesmo-pesquisas-mostram-o-impacto-da-tecnologia-na-aprendizagem/,,Página recriada no novo site com o mesmo caminho
+/blog/lousa-digital-de-65-75-ou-86-polegadas-qual-tamanho-escolher-para-cada-sala/,Blog,,,sim,post ativo no painel,,/blog/lousa-digital-de-65-75-ou-86-polegadas-qual-tamanho-escolher-para-cada-sala/,,Página recriada no novo site com o mesmo caminho
+/blog/por-que-uma-sala-moderna-ainda-precisa-de-um-quadro-branco/,Blog,,,sim,post ativo no painel,,/blog/por-que-uma-sala-moderna-ainda-precisa-de-um-quadro-branco/,,Página recriada no novo site com o mesmo caminho
+/blog/como-a-lousa-digital-pode-enriquecer-uma-aula-ou-apresentacao/,Blog,,,sim,post ativo no painel,,/blog/como-a-lousa-digital-pode-enriquecer-uma-aula-ou-apresentacao/,,Página recriada no novo site com o mesmo caminho
+/blog/muito-alem-do-giz-e-do-touch-como-a-inteligencia-artificial-foi-parar-na-lousa-digital/,Blog,,,sim,post ativo no painel,,/blog/muito-alem-do-giz-e-do-touch-como-a-inteligencia-artificial-foi-parar-na-lousa-digital/,,Página recriada no novo site com o mesmo caminho
+/blog/como-preparar-uma-aula-em-uma-lousa-digital/,Blog,,,sim,post ativo no painel,,/blog/como-preparar-uma-aula-em-uma-lousa-digital/,,Página recriada no novo site com o mesmo caminho
+/blog/digital-signage-versatilidade-e-eficiencia-na-comunicacao/,Blog,,,sim,post ativo no painel,,/blog/digital-signage-versatilidade-e-eficiencia-na-comunicacao/,,Página recriada no novo site com o mesmo caminho
+/blog/tecnologia-touch-screen-inovacao-nos-pontos-de-venda/,Blog,,,sim,post ativo no painel,,/blog/tecnologia-touch-screen-inovacao-nos-pontos-de-venda/,,Página recriada no novo site com o mesmo caminho
+/blog/interatividade-tecnologica-e-sua-influencia-na-escolha-do-consumidor/,Blog,,,sim,post ativo no painel,,/blog/interatividade-tecnologica-e-sua-influencia-na-escolha-do-consumidor/,,Página recriada no novo site com o mesmo caminho
+/blog/7-tendencias-tecnologicas-em-sala-de-aula/,Blog,,,sim,post ativo no painel,,/blog/7-tendencias-tecnologicas-em-sala-de-aula/,,Página recriada no novo site com o mesmo caminho
+/blog/7-dicas-para-produzir-conteudo-para-video-wall/,Blog,,,sim,post ativo no painel,,/blog/7-dicas-para-produzir-conteudo-para-video-wall/,,Página recriada no novo site com o mesmo caminho
+/blog/8-dicas-para-ensinar-usando-a-lousas-digital/,Blog,,,sim,post ativo no painel,,/blog/8-dicas-para-ensinar-usando-a-lousas-digital/,,Página recriada no novo site com o mesmo caminho
+/blog/monitores-touch-screen-qualipix-tecnologia-e-inovacao-na-educacao/,Blog,,,sim,post ativo no painel,,/blog/monitores-touch-screen-qualipix-tecnologia-e-inovacao-na-educacao/,,Página recriada no novo site com o mesmo caminho
+/blog/6-mitos-sobre-o-uso-da-tecnologia-na-educacao/,Blog,,,sim,post ativo no painel,,/blog/6-mitos-sobre-o-uso-da-tecnologia-na-educacao/,,Página recriada no novo site com o mesmo caminho
+/blog/reunioes-mais-inteligentes-e-eficazes-com-a-tv-touch-screen/,Blog,,,sim,post ativo no painel,,/blog/reunioes-mais-inteligentes-e-eficazes-com-a-tv-touch-screen/,,Página recriada no novo site com o mesmo caminho
+/blog/a-revolucao-4-0-e-a-educacao/,Blog,,,sim,post ativo no painel,,/blog/a-revolucao-4-0-e-a-educacao/,,Página recriada no novo site com o mesmo caminho

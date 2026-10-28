@@ -2,7 +2,18 @@
   "siteUrl": "https://www.qualipix.com.br",
   "lojaUrl": "https://loja.qualipix.com.br",
   "pages": [
-    { "path": "/", "changefreq": "monthly", "priority": "1.0" },
-    { "path": "/privacidade.html", "changefreq": "yearly", "priority": "0.3" }
-  ]
+    {
+      "path": "/",
+      "changefreq": "monthly",
+      "priority": "1.0"
+    }
+  ],
+  "priorities": {
+    "produto": "0.9",
+    "segmento": "0.8",
+    "loja": "0.8",
+    "lista": "0.7",
+    "doc": "0.5",
+    "inner": "0.5"
+  }
 }
