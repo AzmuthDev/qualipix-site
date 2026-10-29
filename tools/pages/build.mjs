@@ -13,11 +13,32 @@ import loja from './content/loja.mjs';
 import institucional from './content/institucional.mjs';
 import extra from './content/extra.mjs';
 import blog from './content/blog.mjs';
+import { GALLERIES, SEGMENT_PHOTOS, HOME_SEGMENTS } from './content/fotos.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const cfg = JSON.parse(fs.readFileSync(path.join(ROOT, 'seo/config.json'), 'utf8'));
 const site = cfg.siteUrl.replace(/\/$/, '');
 const pages = [...produtos, ...segmentos, ...loja, ...institucional, ...extra, ...blog];
+
+// fotos reais: mosaico antes do vídeo (ou das perguntas, ficha, contato) e foto no topo dos segmentos
+for (const p of pages) {
+  if (p.redirect) continue;
+  const seg = p.kind === 'segmento' && SEGMENT_PHOTOS[(p.canonical || p.path).replace(/\//g, '')];
+  const g = GALLERIES[p.path] || (seg && { title: 'Veja onde a Qualipix já está.', items: seg.items });
+  if (seg) {
+    const hero = p.blocks.find((b) => b.type === 'hero');
+    hero.bg = seg.bg;
+    delete hero.img;
+  }
+  if (!g) continue;
+  const { second, ...gallery } = g;
+  const top = p.blocks.findIndex((b) => b.type === 'subnav');
+  const at = second ? (top > -1 ? top : 0) + 1 : ['video', 'faq', 'specs', 'cta'].map((t) => p.blocks.findIndex((b) => b.type === t)).find((i) => i > -1);
+  p.blocks.splice(at ?? p.blocks.length, 0, { type: 'gallery', ...gallery });
+  // capa do vídeo: a segunda foto do mosaico (a primeira já aparece grande logo acima)
+  const video = p.blocks.find((b) => b.type === 'video');
+  if (video) video.photo = (g.items[1] || g.items[0])[0];
+}
 
 // caminhos repetidos ou que colidem com arquivos do site
 const seen = new Set();
@@ -64,6 +85,16 @@ const swap = (name, re, html) => {
 };
 swap('header', /<header class="site-header"[\s\S]*?<\/header>/, header({ theme: 'dark', current: '/' }));
 swap('footer', /<footer class="site-footer"[\s\S]*?<\/footer>\s*<a class="wa-float"[\s\S]*?<\/a>/, footer().replace('class="wa-float is-on"', 'class="wa-float"'));
+for (const [id, [file, alt]] of Object.entries(HOME_SEGMENTS)) {
+  const start = home.indexOf(`id="${id}"`);
+  if (start < 0) continue;
+  const end = home.indexOf('</div>', start);
+  if (home.slice(start, end).includes('seg-photo')) continue;
+  const ul = home.lastIndexOf('</ul>', end);
+  const at = ul > start ? ul + 5 : end;
+  home = home.slice(0, at) + `
+              <figure class="seg-photo"><img src="assets/img/fotos/${file}.webp" alt="${alt}" loading="lazy" width="1600" height="870"></figure>` + home.slice(at);
+}
 if (!home.includes('css/pages.css')) home = home.replace(/(<link rel="stylesheet" href="css\/style\.css\?v=)\d+(">)/, `$1${V}$2\n  <link rel="stylesheet" href="css/pages.css?v=${V}">`);
 home = home.replace(/(css\/(?:style|pages)\.css\?v=)\d+/g, `$1${V}`).replace(/(js\/(?:main|env)\.js\?v=)\d+/g, `$1${V}`);
 fs.writeFileSync(homeFile, home);

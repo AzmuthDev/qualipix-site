@@ -174,11 +174,12 @@ const btn = (a) => `<a class="btn ${a.primary ? 'btn-primary' : 'btn-ghost'}" hr
 
 export const blocks = {
   hero(b, page) {
-    const media = b.img
+    const media = b.bg ? '' : b.img
       ? `<div class="p-hero-media" data-tilt><div class="p-hero-glow" aria-hidden="true"></div><img src="/assets/renders/${b.img}.webp" alt="${esc(b.imgAlt || '')}" width="1200" height="900" fetchpriority="high"></div>`
       : b.photo ? `<div class="p-hero-media p-hero-photo"><img src="${b.photo}" alt="${esc(b.imgAlt || '')}" width="800" height="800" fetchpriority="high"></div>` : '';
-    return `<section class="p-hero${media ? '' : ' p-hero-text'}" data-theme="dark">
-      <div class="p-hero-bg" aria-hidden="true"></div>
+    const bg = b.bg ? `<img class="p-hero-photo-bg" src="/assets/img/fotos/${b.bg}.webp" alt="" width="1920" height="1078" fetchpriority="high"${b.bgPos ? ` style="object-position:${b.bgPos}"` : ''}>` : '';
+    return `<section class="p-hero${b.bg ? ' p-hero-photo' : media ? '' : ' p-hero-text'}" data-theme="dark">
+      ${bg}<div class="p-hero-bg" aria-hidden="true"></div>
       <div class="wrap p-hero-grid">
         <div class="p-hero-copy">
           ${crumbs(page.crumbs)}
@@ -251,7 +252,7 @@ export const blocks = {
       <div class="wrap p-video-grid">
         <header><h2 class="h2 p-h2">${b.title}</h2>${b.lead ? `<p class="lead">${b.lead}</p>` : ''}</header>
         <div class="yt" data-yt="${esc(b.youtube)}">
-          ${b.poster ? `<img src="/assets/renders/${b.poster}.webp" alt="" width="1200" height="900" loading="lazy">` : ''}
+          ${b.photo ? `<img class="yt-photo" src="/assets/img/fotos/${b.photo}.webp" alt="" loading="lazy">` : b.poster ? `<img src="/assets/renders/${b.poster}.webp" alt="" width="1200" height="900" loading="lazy">` : ''}
           <button type="button" class="yt-play" aria-label="Assistir ao vídeo: ${esc(b.label || b.title.replace(/<[^>]+>/g, ''))}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><span>Assistir ao vídeo</span></button>
           <p class="yt-note">O vídeo abre do YouTube quando você clicar.</p>
         </div>
@@ -330,6 +331,18 @@ export const blocks = {
       <div class="wrap">
         ${b.title ? `<header class="p-head"><h2 class="h2 p-h2">${b.title}</h2>${b.lead ? `<p class="lead">${b.lead}</p>` : ''}</header>` : ''}
         <div class="col-grid">${b.cols.map((c) => `<div class="col-card" data-reveal><h3>${esc(c.title)}</h3>${c.text ? `<p>${c.text}</p>` : ''}<ul class="line-points" role="list">${c.items.map((i) => `<li>${i}</li>`).join('')}</ul></div>`).join('')}</div>
+      </div>
+    </section>`;
+  },
+
+  // fotos reais: uma grande e duas menores
+  gallery(b) {
+    const [big, ...rest] = b.items;
+    const fig = ([file, alt, cap], cls = '') => `<figure class="g-item${cls}" data-reveal><img src="/assets/img/fotos/${file}.webp" alt="${esc(alt)}" loading="lazy">${cap ? `<figcaption>${esc(cap)}</figcaption>` : ''}</figure>`;
+    return `<section class="p-section p-gallery" ${b.id ? `id="${b.id}" ` : ''}data-theme="light">
+      <div class="wrap">
+        <header class="p-head"><p class="kicker">${esc(b.kicker || 'Na prática')}</p><h2 class="h2 p-h2">${b.title}</h2>${b.lead ? `<p class="lead">${b.lead}</p>` : ''}</header>
+        <div class="g-grid${rest.length ? '' : ' is-single'}">${fig(big, ' g-big')}${rest.map((r) => fig(r)).join('')}</div>
       </div>
     </section>`;
   },

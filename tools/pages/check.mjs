@@ -14,7 +14,7 @@ const LOJA = /^\/(central|carrinho|checkout|login|contato)(\/|$)/;
 const files = [];
 (function walk(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (['node_modules', 'tools', '.git', '_review', 'deploy', 'seo', '.claude'].includes(e.name)) continue;
+    if (['node_modules', 'tools', '.git', '_review', 'deploy', 'seo', '.claude', 'dist-seven'].includes(e.name)) continue;
     const p = path.join(dir, e.name);
     if (e.isDirectory()) walk(p);
     else if (e.name.endsWith('.html')) files.push(p);
@@ -67,6 +67,8 @@ if (si > -1) {
     // revela tudo para a captura de página inteira
     await page.evaluate(async () => {
       document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
+      document.querySelectorAll('img[loading="lazy"]').forEach((img) => { img.loading = 'eager'; });
+      await Promise.all([...document.images].map((img) => (img.complete ? 0 : new Promise((r) => { img.onload = img.onerror = r; }))));
       await new Promise((r) => setTimeout(r, 1200));
     });
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
